@@ -43,13 +43,15 @@ namespace Proyecto2GUI
                 conexion.Open();
                 //un objeto llamado query, que ingresa los datos en nuestra "TABLA Articulo", en los campos
                 //" ID, Nombre, Marca, Cantidad, Precio " se trabaja con parametros para evitar la Inyeccion SQL
-                string query = "insert into Articulo(ID,Nombre,Marca,Cantidad,Precio) values (@ID,@Nombre,@Marca,@Cantidad,@Precio)";
+                //EN RESUMEN AGREGA LOS DATOS QUE LE MANDO
+                //string query = "insert into Articulo(ID,Nombre,Marca,Cantidad,Precio) values (@ID,@Nombre,@Marca,@Cantidad,@Precio)";
+                string query = "insert into Articulo(Nombre,Marca,Cantidad,Precio) values (@Nombre,@Marca,@Cantidad,@Precio)";
 
                 //esto recibe nuestra query que creamos arriba y nuestra conexion, este CMD se encarga de ejecutar nuestra consulta
                 //pero le tenemos que decir que envie unos parametros
                 SQLiteCommand cmd = new SQLiteCommand(query, conexion);
                 //el nombre del parametro y el valor, le enviamos un objeto de tipo persona
-                cmd.Parameters.Add(new SQLiteParameter("@ID", obj.ID));
+               // cmd.Parameters.Add(new SQLiteParameter("@ID", obj.ID));
                 cmd.Parameters.Add(new SQLiteParameter("@Nombre", obj.Nombre));
                 cmd.Parameters.Add(new SQLiteParameter("@Marca", obj.Marca));
                 cmd.Parameters.Add(new SQLiteParameter("@Cantidad", obj.Cantidad));
@@ -101,8 +103,56 @@ namespace Proyecto2GUI
             return oLista;
         }
 
+        //ESTE ES EL METODO PARA EDITAR UNO DE LOS ELEMENTOS DE LA BASE DE DATOS 
+        //SOLO SE CAMBIO LA SENTENCIA SQL Y BUSCA POR EL ID DEL OBJETO
+        public bool Editar(Articulo obj)
+        {
+            bool respuesta = true;
+            
+            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+            {
+                
+                conexion.Open();
+        
+                string query = "Update Articulo set Nombre = @Nombre,Marca = @Marca,Cantidad = @Cantidad,Precio = @Precio where ID = @ID";
 
+                
+                SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+                cmd.Parameters.Add(new SQLiteParameter("@ID", obj.ID));
+                cmd.Parameters.Add(new SQLiteParameter("@Nombre", obj.Nombre));
+                cmd.Parameters.Add(new SQLiteParameter("@Marca", obj.Marca));
+                cmd.Parameters.Add(new SQLiteParameter("@Cantidad", obj.Cantidad));
+                cmd.Parameters.Add(new SQLiteParameter("@Precio", obj.Precio));
+                cmd.CommandType = System.Data.CommandType.Text;
+                if (cmd.ExecuteNonQuery() < 1)
+                {
+                    respuesta = false;
+                }
 
+            }
+            return respuesta;
+        }
+        // metodo de eliminar DU'H 
+        public bool Eliminar(Articulo obj)
+        {
+            bool respuesta = true;
+
+            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+            {
+                conexion.Open();
+
+                string query = "delete from Articulo where ID = @ID";
+                SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+                cmd.Parameters.Add(new SQLiteParameter("@ID", obj.ID));
+                cmd.CommandType = System.Data.CommandType.Text;
+                if (cmd.ExecuteNonQuery() < 1)
+                {
+                    respuesta = false;
+                }
+
+            }
+            return respuesta;
+        }
 
 
     }

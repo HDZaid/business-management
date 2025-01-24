@@ -19,13 +19,13 @@ namespace Proyecto2GUI
         {
             _biblioteca = biliotecaActual;
             InitializeComponent();
-          //  lblMensajeUsuario.Visible = false;
+            //  lblMensajeUsuario.Visible = false;
 
         }
 
         private void btnRegistrarLibro_Click(object sender, EventArgs e)
         {
-            
+
             Articulo objeto = new Articulo()
             {//ID *en el video no lo coloco porque es para eliminar y editar * en este caso no se usa porque es autoincrementable
                 Nombre = txtnombre.Text,
@@ -38,6 +38,7 @@ namespace Proyecto2GUI
 
             if (respuesta)
             {
+                //ESTA COSA ES LA QUE MEUSTRA LA TABLA 
                 mostrar_Articulo();
             }
 
@@ -52,12 +53,27 @@ namespace Proyecto2GUI
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            LimpiarCampos();
+            Articulo objeto = new Articulo()
+
+            {
+                ID = int.Parse(txtid.Text),
+                Nombre = txtnombre.Text,
+                Marca = txtmarca.Text,
+                Cantidad = int.Parse(txtcantidad.Text),
+                Precio = int.Parse(txtprecio.Text)
+            };
+
+            bool respuesta = ArticuloLogica.Instancia.Editar(objeto);
+
+            if (respuesta)
+            {
+                mostrar_Articulo();
+            }
         }
 
         private void LimpiarCampos()
         {
-          //  lblMensajeUsuario.Visible = false;
+            //  lblMensajeUsuario.Visible = false;
             txtid.Clear();
             txtnombre.Clear();
             txtmarca.Clear();
@@ -67,6 +83,22 @@ namespace Proyecto2GUI
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btneliminar_Click(object sender, EventArgs e)
+        {
+            Articulo objeto = new Articulo()
+            {
+                //aca solo es necesario el parametro de ID
+                ID = int.Parse(txtid.Text),
+            };
+
+            bool respuesta = ArticuloLogica.Instancia.Eliminar(objeto);
+
+            if (respuesta)
+            {
+                mostrar_Articulo();
+            }
         }
     }
 }

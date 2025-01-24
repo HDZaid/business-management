@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BiblioAgregarLibro));
             label1 = new Label();
             panel1 = new Panel();
+            btneliminar = new Button();
             txtprecio = new TextBox();
             label6 = new Label();
             btneditar = new Button();
@@ -43,7 +44,6 @@
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
-            btneliminar = new Button();
             DGVArticulos = new DataGridView();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)DGVArticulos).BeginInit();
@@ -82,6 +82,16 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(792, 220);
             panel1.TabIndex = 9;
+            // 
+            // btneliminar
+            // 
+            btneliminar.Location = new Point(641, 164);
+            btneliminar.Name = "btneliminar";
+            btneliminar.Size = new Size(132, 39);
+            btneliminar.TabIndex = 13;
+            btneliminar.Text = "Eliminar";
+            btneliminar.UseVisualStyleBackColor = true;
+            btneliminar.Click += btneliminar_Click;
             // 
             // txtprecio
             // 
@@ -227,21 +237,12 @@
             label2.TabIndex = 0;
             label2.Text = "ID";
             // 
-            // btneliminar
-            // 
-            btneliminar.Location = new Point(641, 164);
-            btneliminar.Name = "btneliminar";
-            btneliminar.Size = new Size(132, 39);
-            btneliminar.TabIndex = 13;
-            btneliminar.Text = "Eliminar";
-            btneliminar.UseVisualStyleBackColor = true;
-            // 
             // DGVArticulos
             // 
             DGVArticulos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            DGVArticulos.Location = new Point(37, 352);
+            DGVArticulos.Location = new Point(37, 337);
             DGVArticulos.Name = "DGVArticulos";
-            DGVArticulos.Size = new Size(736, 257);
+            DGVArticulos.Size = new Size(736, 318);
             DGVArticulos.TabIndex = 10;
             // 
             // BiblioAgregarLibro
