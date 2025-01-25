@@ -8,3 +8,4 @@ El software cuenta con
 - Un apartado que gestiona las ventas
 - Un modulo especializado en la gestión recursos humanos
 - Ayuda a optimizar inversiones y transacciones 
+
