@@ -49,6 +49,7 @@
             btnRegistrarLibro = new Button();
             BotonGestionLibros = new Button();
             panel1 = new Panel();
+            label2 = new Label();
             lblTituloApp = new Label();
             panel2 = new Panel();
             panelChildForm = new Panel();
@@ -75,7 +76,7 @@
             barraTitulo.Dock = DockStyle.Top;
             barraTitulo.Location = new Point(0, 0);
             barraTitulo.Name = "barraTitulo";
-            barraTitulo.Size = new Size(1367, 65);
+            barraTitulo.Size = new Size(1450, 65);
             barraTitulo.TabIndex = 0;
             barraTitulo.Paint += barraTitulo_Paint;
             barraTitulo.MouseDown += barraTitulo_MouseDown;
@@ -95,7 +96,7 @@
             // 
             btnMinimizar.Cursor = Cursors.Hand;
             btnMinimizar.Image = (Image)resources.GetObject("btnMinimizar.Image");
-            btnMinimizar.Location = new Point(1270, 12);
+            btnMinimizar.Location = new Point(1344, 12);
             btnMinimizar.Name = "btnMinimizar";
             btnMinimizar.Size = new Size(40, 40);
             btnMinimizar.SizeMode = PictureBoxSizeMode.Zoom;
@@ -107,7 +108,7 @@
             // 
             btnCerrar.Cursor = Cursors.Hand;
             btnCerrar.Image = (Image)resources.GetObject("btnCerrar.Image");
-            btnCerrar.Location = new Point(1327, 12);
+            btnCerrar.Location = new Point(1398, 12);
             btnCerrar.Name = "btnCerrar";
             btnCerrar.Size = new Size(40, 40);
             btnCerrar.SizeMode = PictureBoxSizeMode.Zoom;
@@ -130,7 +131,7 @@
             panelMenuPrincipal.Dock = DockStyle.Left;
             panelMenuPrincipal.Location = new Point(0, 65);
             panelMenuPrincipal.Name = "panelMenuPrincipal";
-            panelMenuPrincipal.Size = new Size(280, 935);
+            panelMenuPrincipal.Size = new Size(292, 815);
             panelMenuPrincipal.TabIndex = 1;
             // 
             // btnCerrarSesion
@@ -144,10 +145,10 @@
             btnCerrarSesion.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
             btnCerrarSesion.Image = (Image)resources.GetObject("btnCerrarSesion.Image");
             btnCerrarSesion.ImageAlign = ContentAlignment.MiddleLeft;
-            btnCerrarSesion.Location = new Point(0, 848);
+            btnCerrarSesion.Location = new Point(0, 728);
             btnCerrarSesion.Name = "btnCerrarSesion";
             btnCerrarSesion.Padding = new Padding(20, 0, 48, 0);
-            btnCerrarSesion.Size = new Size(280, 60);
+            btnCerrarSesion.Size = new Size(292, 60);
             btnCerrarSesion.TabIndex = 7;
             btnCerrarSesion.Text = "Cerrar Sesion";
             btnCerrarSesion.TextAlign = ContentAlignment.MiddleRight;
@@ -162,7 +163,7 @@
             PanelGenInformes.Dock = DockStyle.Top;
             PanelGenInformes.Location = new Point(0, 538);
             PanelGenInformes.Name = "PanelGenInformes";
-            PanelGenInformes.Size = new Size(280, 84);
+            PanelGenInformes.Size = new Size(292, 84);
             PanelGenInformes.TabIndex = 6;
             // 
             // btnEstadisticas
@@ -179,7 +180,7 @@
             btnEstadisticas.Location = new Point(0, 40);
             btnEstadisticas.Name = "btnEstadisticas";
             btnEstadisticas.Padding = new Padding(60, 0, 17, 0);
-            btnEstadisticas.Size = new Size(280, 40);
+            btnEstadisticas.Size = new Size(292, 40);
             btnEstadisticas.TabIndex = 1;
             btnEstadisticas.Text = "Libros y Estadisticas";
             btnEstadisticas.TextAlign = ContentAlignment.MiddleRight;
@@ -200,7 +201,7 @@
             btnPrestamos.Location = new Point(0, 0);
             btnPrestamos.Name = "btnPrestamos";
             btnPrestamos.Padding = new Padding(60, 0, 28, 0);
-            btnPrestamos.Size = new Size(280, 40);
+            btnPrestamos.Size = new Size(292, 40);
             btnPrestamos.TabIndex = 0;
             btnPrestamos.Text = "Prestamos Activos";
             btnPrestamos.TextAlign = ContentAlignment.MiddleRight;
@@ -221,7 +222,7 @@
             BotonGenInformes.Location = new Point(0, 478);
             BotonGenInformes.Name = "BotonGenInformes";
             BotonGenInformes.Padding = new Padding(20, 0, 15, 0);
-            BotonGenInformes.Size = new Size(280, 60);
+            BotonGenInformes.Size = new Size(292, 60);
             BotonGenInformes.TabIndex = 5;
             BotonGenInformes.Text = "Generar Informes";
             BotonGenInformes.TextAlign = ContentAlignment.MiddleRight;
@@ -236,7 +237,7 @@
             PanelGestUsuarios.Dock = DockStyle.Top;
             PanelGestUsuarios.Location = new Point(0, 394);
             PanelGestUsuarios.Name = "PanelGestUsuarios";
-            PanelGestUsuarios.Size = new Size(280, 84);
+            PanelGestUsuarios.Size = new Size(292, 84);
             PanelGestUsuarios.TabIndex = 4;
             // 
             // btnEditarUsuario
@@ -253,7 +254,7 @@
             btnEditarUsuario.Location = new Point(0, 40);
             btnEditarUsuario.Name = "btnEditarUsuario";
             btnEditarUsuario.Padding = new Padding(60, 0, 56, 0);
-            btnEditarUsuario.Size = new Size(280, 40);
+            btnEditarUsuario.Size = new Size(292, 40);
             btnEditarUsuario.TabIndex = 1;
             btnEditarUsuario.Text = "Editar Usuario";
             btnEditarUsuario.TextAlign = ContentAlignment.MiddleRight;
@@ -274,7 +275,7 @@
             btnRegistrarUsuario.Location = new Point(0, 0);
             btnRegistrarUsuario.Name = "btnRegistrarUsuario";
             btnRegistrarUsuario.Padding = new Padding(60, 0, 33, 0);
-            btnRegistrarUsuario.Size = new Size(280, 40);
+            btnRegistrarUsuario.Size = new Size(292, 40);
             btnRegistrarUsuario.TabIndex = 0;
             btnRegistrarUsuario.Text = "Registrar Usuario";
             btnRegistrarUsuario.TextAlign = ContentAlignment.MiddleRight;
@@ -295,7 +296,7 @@
             BotonGestUsuarios.Location = new Point(0, 334);
             BotonGestUsuarios.Name = "BotonGestUsuarios";
             BotonGestUsuarios.Padding = new Padding(20, 0, 24, 0);
-            BotonGestUsuarios.Size = new Size(280, 60);
+            BotonGestUsuarios.Size = new Size(292, 60);
             BotonGestUsuarios.TabIndex = 3;
             BotonGestUsuarios.Text = "Gestion Usuarios";
             BotonGestUsuarios.TextAlign = ContentAlignment.MiddleRight;
@@ -311,7 +312,7 @@
             PanelSubGestLibros.Dock = DockStyle.Top;
             PanelSubGestLibros.Location = new Point(0, 210);
             PanelSubGestLibros.Name = "PanelSubGestLibros";
-            PanelSubGestLibros.Size = new Size(280, 124);
+            PanelSubGestLibros.Size = new Size(292, 124);
             PanelSubGestLibros.TabIndex = 2;
             // 
             // btnEliminarLibro
@@ -327,10 +328,10 @@
             btnEliminarLibro.ImageAlign = ContentAlignment.MiddleLeft;
             btnEliminarLibro.Location = new Point(0, 80);
             btnEliminarLibro.Name = "btnEliminarLibro";
-            btnEliminarLibro.Padding = new Padding(60, 0, 55, 0);
-            btnEliminarLibro.Size = new Size(280, 40);
+            btnEliminarLibro.Padding = new Padding(55, 0, 103, 0);
+            btnEliminarLibro.Size = new Size(292, 40);
             btnEliminarLibro.TabIndex = 2;
-            btnEliminarLibro.Text = "Eliminar Libro";
+            btnEliminarLibro.Text = "Compras";
             btnEliminarLibro.TextAlign = ContentAlignment.MiddleRight;
             btnEliminarLibro.UseVisualStyleBackColor = false;
             btnEliminarLibro.Click += btnEliminarLibro_Click;
@@ -348,10 +349,10 @@
             btnBuscarLibro.ImageAlign = ContentAlignment.MiddleLeft;
             btnBuscarLibro.Location = new Point(0, 40);
             btnBuscarLibro.Name = "btnBuscarLibro";
-            btnBuscarLibro.Padding = new Padding(60, 0, 66, 0);
-            btnBuscarLibro.Size = new Size(280, 40);
+            btnBuscarLibro.Padding = new Padding(55, 0, 45, 0);
+            btnBuscarLibro.Size = new Size(292, 40);
             btnBuscarLibro.TabIndex = 1;
-            btnBuscarLibro.Text = "Buscar Libro";
+            btnBuscarLibro.Text = "Buscar Producto";
             btnBuscarLibro.TextAlign = ContentAlignment.MiddleRight;
             btnBuscarLibro.UseVisualStyleBackColor = false;
             btnBuscarLibro.Click += btnBuscarLibro_Click;
@@ -370,10 +371,10 @@
             btnRegistrarLibro.ImageAlign = ContentAlignment.MiddleLeft;
             btnRegistrarLibro.Location = new Point(0, 0);
             btnRegistrarLibro.Name = "btnRegistrarLibro";
-            btnRegistrarLibro.Padding = new Padding(60, 0, 55, 0);
-            btnRegistrarLibro.Size = new Size(280, 40);
+            btnRegistrarLibro.Padding = new Padding(55, 0, 40, 0);
+            btnRegistrarLibro.Size = new Size(292, 40);
             btnRegistrarLibro.TabIndex = 0;
-            btnRegistrarLibro.Text = "Agregar Libro";
+            btnRegistrarLibro.Text = "Agregar Producto";
             btnRegistrarLibro.TextAlign = ContentAlignment.MiddleRight;
             btnRegistrarLibro.UseVisualStyleBackColor = false;
             btnRegistrarLibro.Click += btnRegistrarLibro_Click;
@@ -392,10 +393,10 @@
             BotonGestionLibros.ImageAlign = ContentAlignment.MiddleLeft;
             BotonGestionLibros.Location = new Point(0, 150);
             BotonGestionLibros.Name = "BotonGestionLibros";
-            BotonGestionLibros.Padding = new Padding(20, 0, 48, 0);
-            BotonGestionLibros.Size = new Size(280, 60);
+            BotonGestionLibros.Padding = new Padding(20, 0, 82, 0);
+            BotonGestionLibros.Size = new Size(292, 60);
             BotonGestionLibros.TabIndex = 1;
-            BotonGestionLibros.Text = "Gestion Libros";
+            BotonGestionLibros.Text = "Inventario";
             BotonGestionLibros.TextAlign = ContentAlignment.MiddleRight;
             BotonGestionLibros.UseVisualStyleBackColor = false;
             BotonGestionLibros.Click += BotonGestionLibros_Click;
@@ -403,71 +404,84 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(244, 162, 97);
+            panel1.Controls.Add(label2);
             panel1.Controls.Add(lblTituloApp);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(280, 150);
+            panel1.Size = new Size(292, 150);
             panel1.TabIndex = 0;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Britannic Bold", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(91, 79);
+            label2.Name = "label2";
+            label2.Size = new Size(113, 44);
+            label2.TabIndex = 7;
+            label2.Text = "Store";
             // 
             // lblTituloApp
             // 
             lblTituloApp.AutoSize = true;
             lblTituloApp.Font = new Font("Britannic Bold", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblTituloApp.Location = new Point(77, 37);
+            lblTituloApp.Location = new Point(64, 35);
             lblTituloApp.Name = "lblTituloApp";
-            lblTituloApp.Size = new Size(137, 44);
+            lblTituloApp.Size = new Size(168, 44);
             lblTituloApp.TabIndex = 6;
-            lblTituloApp.Text = "Tienda";
+            lblTituloApp.Text = "Make Up";
             // 
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(244, 162, 97);
             panel2.Dock = DockStyle.Bottom;
-            panel2.Location = new Point(0, 908);
+            panel2.Location = new Point(0, 788);
             panel2.Name = "panel2";
-            panel2.Size = new Size(280, 27);
+            panel2.Size = new Size(292, 27);
             panel2.TabIndex = 8;
             panel2.Paint += panel2_Paint;
             // 
             // panelChildForm
             // 
-            panelChildForm.BackColor = Color.Snow;
+            panelChildForm.BackColor = Color.WhiteSmoke;
             panelChildForm.Controls.Add(label1);
             panelChildForm.Controls.Add(lblMensajeUser);
             panelChildForm.Controls.Add(lblBienvenida);
             panelChildForm.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            panelChildForm.Location = new Point(330, 121);
+            panelChildForm.Location = new Point(348, 116);
             panelChildForm.Name = "panelChildForm";
-            panelChildForm.Size = new Size(1000, 850);
+            panelChildForm.Size = new Size(1060, 720);
             panelChildForm.TabIndex = 2;
             // 
             // label1
             // 
             label1.Image = (Image)resources.GetObject("label1.Image");
-            label1.Location = new Point(211, 154);
+            label1.Location = new Point(293, 204);
             label1.Name = "label1";
-            label1.Size = new Size(672, 446);
+            label1.Size = new Size(488, 446);
             label1.TabIndex = 9;
             // 
             // lblMensajeUser
             // 
+            lblMensajeUser.BackColor = Color.WhiteSmoke;
             lblMensajeUser.Dock = DockStyle.Top;
             lblMensajeUser.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblMensajeUser.Location = new Point(0, 77);
             lblMensajeUser.Name = "lblMensajeUser";
-            lblMensajeUser.Size = new Size(1000, 78);
+            lblMensajeUser.Size = new Size(1060, 78);
             lblMensajeUser.TabIndex = 8;
             lblMensajeUser.Text = "Mensaje";
             lblMensajeUser.TextAlign = ContentAlignment.TopCenter;
             // 
             // lblBienvenida
             // 
+            lblBienvenida.BackColor = Color.WhiteSmoke;
             lblBienvenida.Dock = DockStyle.Top;
             lblBienvenida.Font = new Font("Microsoft Sans Serif", 22F, FontStyle.Bold);
             lblBienvenida.Location = new Point(0, 0);
             lblBienvenida.Name = "lblBienvenida";
-            lblBienvenida.Size = new Size(1000, 77);
+            lblBienvenida.Size = new Size(1060, 77);
             lblBienvenida.TabIndex = 7;
             lblBienvenida.Text = "Bienvenid@: ";
             lblBienvenida.TextAlign = ContentAlignment.MiddleCenter;
@@ -476,9 +490,9 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Snow;
+            BackColor = Color.WhiteSmoke;
             BackgroundImageLayout = ImageLayout.Zoom;
-            ClientSize = new Size(1367, 1000);
+            ClientSize = new Size(1450, 880);
             Controls.Add(panelChildForm);
             Controls.Add(panelMenuPrincipal);
             Controls.Add(barraTitulo);
@@ -528,6 +542,7 @@
         private Panel panel2;
         private Button btnCerrarSesion;
         private Button button1;
+        private Label label2;
         private Label label1;
     }
 }
