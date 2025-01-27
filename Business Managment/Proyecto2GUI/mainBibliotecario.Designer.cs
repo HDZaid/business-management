@@ -52,6 +52,7 @@
             lblTituloApp = new Label();
             panel2 = new Panel();
             panelChildForm = new Panel();
+            label1 = new Label();
             lblMensajeUser = new Label();
             lblBienvenida = new Label();
             barraTitulo.SuspendLayout();
@@ -74,7 +75,7 @@
             barraTitulo.Dock = DockStyle.Top;
             barraTitulo.Location = new Point(0, 0);
             barraTitulo.Name = "barraTitulo";
-            barraTitulo.Size = new Size(1380, 65);
+            barraTitulo.Size = new Size(1367, 65);
             barraTitulo.TabIndex = 0;
             barraTitulo.Paint += barraTitulo_Paint;
             barraTitulo.MouseDown += barraTitulo_MouseDown;
@@ -82,13 +83,12 @@
             // tituloBarraBibliotecario
             // 
             tituloBarraBibliotecario.AutoSize = true;
-            tituloBarraBibliotecario.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            tituloBarraBibliotecario.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             tituloBarraBibliotecario.ForeColor = Color.Transparent;
             tituloBarraBibliotecario.Location = new Point(623, 18);
             tituloBarraBibliotecario.Name = "tituloBarraBibliotecario";
-            tituloBarraBibliotecario.Size = new Size(123, 27);
+            tituloBarraBibliotecario.Size = new Size(0, 25);
             tituloBarraBibliotecario.TabIndex = 3;
-            tituloBarraBibliotecario.Text = "Bibliotecario";
             tituloBarraBibliotecario.MouseDown += tituloBarraBibliotecario_MouseDown;
             // 
             // btnMinimizar
@@ -117,7 +117,7 @@
             // 
             // panelMenuPrincipal
             // 
-            panelMenuPrincipal.BackColor = Color.FromArgb(184, 149, 93);
+            panelMenuPrincipal.BackColor = Color.FromArgb(244, 162, 97);
             panelMenuPrincipal.Controls.Add(btnCerrarSesion);
             panelMenuPrincipal.Controls.Add(PanelGenInformes);
             panelMenuPrincipal.Controls.Add(BotonGenInformes);
@@ -130,27 +130,28 @@
             panelMenuPrincipal.Dock = DockStyle.Left;
             panelMenuPrincipal.Location = new Point(0, 65);
             panelMenuPrincipal.Name = "panelMenuPrincipal";
-            panelMenuPrincipal.Size = new Size(280, 715);
+            panelMenuPrincipal.Size = new Size(280, 935);
             panelMenuPrincipal.TabIndex = 1;
             // 
             // btnCerrarSesion
             // 
+            btnCerrarSesion.BackColor = Color.FromArgb(244, 162, 97);
             btnCerrarSesion.Cursor = Cursors.Hand;
             btnCerrarSesion.Dock = DockStyle.Bottom;
             btnCerrarSesion.FlatAppearance.BorderSize = 0;
             btnCerrarSesion.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 165, 36);
             btnCerrarSesion.FlatStyle = FlatStyle.Flat;
-            btnCerrarSesion.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Bold);
+            btnCerrarSesion.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
             btnCerrarSesion.Image = (Image)resources.GetObject("btnCerrarSesion.Image");
             btnCerrarSesion.ImageAlign = ContentAlignment.MiddleLeft;
-            btnCerrarSesion.Location = new Point(0, 628);
+            btnCerrarSesion.Location = new Point(0, 848);
             btnCerrarSesion.Name = "btnCerrarSesion";
             btnCerrarSesion.Padding = new Padding(20, 0, 48, 0);
             btnCerrarSesion.Size = new Size(280, 60);
             btnCerrarSesion.TabIndex = 7;
             btnCerrarSesion.Text = "Cerrar Sesion";
             btnCerrarSesion.TextAlign = ContentAlignment.MiddleRight;
-            btnCerrarSesion.UseVisualStyleBackColor = true;
+            btnCerrarSesion.UseVisualStyleBackColor = false;
             btnCerrarSesion.Click += btnCerrarSesion_Click;
             // 
             // PanelGenInformes
@@ -166,13 +167,13 @@
             // 
             // btnEstadisticas
             // 
-            btnEstadisticas.BackColor = Color.FromArgb(230, 165, 36);
+            btnEstadisticas.BackColor = Color.FromArgb(248, 191, 214);
             btnEstadisticas.Cursor = Cursors.Hand;
             btnEstadisticas.Dock = DockStyle.Top;
             btnEstadisticas.FlatAppearance.BorderSize = 0;
             btnEstadisticas.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 165, 36);
             btnEstadisticas.FlatStyle = FlatStyle.Flat;
-            btnEstadisticas.Font = new Font("Segoe UI Variable Small Semibol", 9F, FontStyle.Bold);
+            btnEstadisticas.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold);
             btnEstadisticas.Image = (Image)resources.GetObject("btnEstadisticas.Image");
             btnEstadisticas.ImageAlign = ContentAlignment.MiddleLeft;
             btnEstadisticas.Location = new Point(0, 40);
@@ -187,13 +188,13 @@
             // 
             // btnPrestamos
             // 
-            btnPrestamos.BackColor = Color.FromArgb(230, 165, 36);
+            btnPrestamos.BackColor = Color.FromArgb(248, 191, 214);
             btnPrestamos.Cursor = Cursors.Hand;
             btnPrestamos.Dock = DockStyle.Top;
             btnPrestamos.FlatAppearance.BorderSize = 0;
             btnPrestamos.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 165, 36);
             btnPrestamos.FlatStyle = FlatStyle.Flat;
-            btnPrestamos.Font = new Font("Segoe UI Variable Small Semibol", 9F, FontStyle.Bold);
+            btnPrestamos.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold);
             btnPrestamos.Image = (Image)resources.GetObject("btnPrestamos.Image");
             btnPrestamos.ImageAlign = ContentAlignment.MiddleLeft;
             btnPrestamos.Location = new Point(0, 0);
@@ -208,12 +209,13 @@
             // 
             // BotonGenInformes
             // 
+            BotonGenInformes.BackColor = Color.FromArgb(244, 162, 97);
             BotonGenInformes.Cursor = Cursors.Hand;
             BotonGenInformes.Dock = DockStyle.Top;
             BotonGenInformes.FlatAppearance.BorderSize = 0;
             BotonGenInformes.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 165, 36);
             BotonGenInformes.FlatStyle = FlatStyle.Flat;
-            BotonGenInformes.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Bold);
+            BotonGenInformes.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
             BotonGenInformes.Image = (Image)resources.GetObject("BotonGenInformes.Image");
             BotonGenInformes.ImageAlign = ContentAlignment.MiddleLeft;
             BotonGenInformes.Location = new Point(0, 478);
@@ -223,7 +225,7 @@
             BotonGenInformes.TabIndex = 5;
             BotonGenInformes.Text = "Generar Informes";
             BotonGenInformes.TextAlign = ContentAlignment.MiddleRight;
-            BotonGenInformes.UseVisualStyleBackColor = true;
+            BotonGenInformes.UseVisualStyleBackColor = false;
             BotonGenInformes.Click += BotonGenInformes_Click;
             // 
             // PanelGestUsuarios
@@ -239,13 +241,13 @@
             // 
             // btnEditarUsuario
             // 
-            btnEditarUsuario.BackColor = Color.FromArgb(230, 165, 36);
+            btnEditarUsuario.BackColor = Color.FromArgb(248, 191, 214);
             btnEditarUsuario.Cursor = Cursors.Hand;
             btnEditarUsuario.Dock = DockStyle.Top;
             btnEditarUsuario.FlatAppearance.BorderSize = 0;
             btnEditarUsuario.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 165, 36);
             btnEditarUsuario.FlatStyle = FlatStyle.Flat;
-            btnEditarUsuario.Font = new Font("Segoe UI Variable Small Semibol", 9F, FontStyle.Bold);
+            btnEditarUsuario.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold);
             btnEditarUsuario.Image = (Image)resources.GetObject("btnEditarUsuario.Image");
             btnEditarUsuario.ImageAlign = ContentAlignment.MiddleLeft;
             btnEditarUsuario.Location = new Point(0, 40);
@@ -260,13 +262,13 @@
             // 
             // btnRegistrarUsuario
             // 
-            btnRegistrarUsuario.BackColor = Color.FromArgb(230, 165, 36);
+            btnRegistrarUsuario.BackColor = Color.FromArgb(248, 191, 214);
             btnRegistrarUsuario.Cursor = Cursors.Hand;
             btnRegistrarUsuario.Dock = DockStyle.Top;
             btnRegistrarUsuario.FlatAppearance.BorderSize = 0;
             btnRegistrarUsuario.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 165, 36);
             btnRegistrarUsuario.FlatStyle = FlatStyle.Flat;
-            btnRegistrarUsuario.Font = new Font("Segoe UI Variable Small Semibol", 9F, FontStyle.Bold);
+            btnRegistrarUsuario.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold);
             btnRegistrarUsuario.Image = (Image)resources.GetObject("btnRegistrarUsuario.Image");
             btnRegistrarUsuario.ImageAlign = ContentAlignment.MiddleLeft;
             btnRegistrarUsuario.Location = new Point(0, 0);
@@ -281,12 +283,13 @@
             // 
             // BotonGestUsuarios
             // 
+            BotonGestUsuarios.BackColor = Color.FromArgb(244, 162, 97);
             BotonGestUsuarios.Cursor = Cursors.Hand;
             BotonGestUsuarios.Dock = DockStyle.Top;
             BotonGestUsuarios.FlatAppearance.BorderSize = 0;
             BotonGestUsuarios.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 165, 36);
             BotonGestUsuarios.FlatStyle = FlatStyle.Flat;
-            BotonGestUsuarios.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Bold);
+            BotonGestUsuarios.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
             BotonGestUsuarios.Image = (Image)resources.GetObject("BotonGestUsuarios.Image");
             BotonGestUsuarios.ImageAlign = ContentAlignment.MiddleLeft;
             BotonGestUsuarios.Location = new Point(0, 334);
@@ -296,7 +299,7 @@
             BotonGestUsuarios.TabIndex = 3;
             BotonGestUsuarios.Text = "Gestion Usuarios";
             BotonGestUsuarios.TextAlign = ContentAlignment.MiddleRight;
-            BotonGestUsuarios.UseVisualStyleBackColor = true;
+            BotonGestUsuarios.UseVisualStyleBackColor = false;
             BotonGestUsuarios.Click += BotonGestLibros_Click;
             // 
             // PanelSubGestLibros
@@ -313,13 +316,13 @@
             // 
             // btnEliminarLibro
             // 
-            btnEliminarLibro.BackColor = Color.FromArgb(230, 165, 36);
+            btnEliminarLibro.BackColor = Color.FromArgb(248, 191, 214);
             btnEliminarLibro.Cursor = Cursors.Hand;
             btnEliminarLibro.Dock = DockStyle.Top;
             btnEliminarLibro.FlatAppearance.BorderSize = 0;
             btnEliminarLibro.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 165, 36);
             btnEliminarLibro.FlatStyle = FlatStyle.Flat;
-            btnEliminarLibro.Font = new Font("Segoe UI Variable Small Semibol", 9F, FontStyle.Bold);
+            btnEliminarLibro.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold);
             btnEliminarLibro.Image = (Image)resources.GetObject("btnEliminarLibro.Image");
             btnEliminarLibro.ImageAlign = ContentAlignment.MiddleLeft;
             btnEliminarLibro.Location = new Point(0, 80);
@@ -334,13 +337,13 @@
             // 
             // btnBuscarLibro
             // 
-            btnBuscarLibro.BackColor = Color.FromArgb(230, 165, 36);
+            btnBuscarLibro.BackColor = Color.FromArgb(248, 191, 214);
             btnBuscarLibro.Cursor = Cursors.Hand;
             btnBuscarLibro.Dock = DockStyle.Top;
             btnBuscarLibro.FlatAppearance.BorderSize = 0;
             btnBuscarLibro.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 165, 36);
             btnBuscarLibro.FlatStyle = FlatStyle.Flat;
-            btnBuscarLibro.Font = new Font("Segoe UI Variable Small Semibol", 9F, FontStyle.Bold);
+            btnBuscarLibro.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold);
             btnBuscarLibro.Image = (Image)resources.GetObject("btnBuscarLibro.Image");
             btnBuscarLibro.ImageAlign = ContentAlignment.MiddleLeft;
             btnBuscarLibro.Location = new Point(0, 40);
@@ -355,14 +358,14 @@
             // 
             // btnRegistrarLibro
             // 
-            btnRegistrarLibro.BackColor = Color.FromArgb(230, 165, 36);
+            btnRegistrarLibro.BackColor = Color.FromArgb(248, 191, 214);
             btnRegistrarLibro.BackgroundImageLayout = ImageLayout.None;
             btnRegistrarLibro.Cursor = Cursors.Hand;
             btnRegistrarLibro.Dock = DockStyle.Top;
             btnRegistrarLibro.FlatAppearance.BorderSize = 0;
             btnRegistrarLibro.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 165, 36);
             btnRegistrarLibro.FlatStyle = FlatStyle.Flat;
-            btnRegistrarLibro.Font = new Font("Segoe UI Variable Small Semibol", 9F, FontStyle.Bold);
+            btnRegistrarLibro.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold);
             btnRegistrarLibro.Image = (Image)resources.GetObject("btnRegistrarLibro.Image");
             btnRegistrarLibro.ImageAlign = ContentAlignment.MiddleLeft;
             btnRegistrarLibro.Location = new Point(0, 0);
@@ -377,12 +380,14 @@
             // 
             // BotonGestionLibros
             // 
+            BotonGestionLibros.BackColor = Color.FromArgb(244, 162, 97);
             BotonGestionLibros.Cursor = Cursors.Hand;
             BotonGestionLibros.Dock = DockStyle.Top;
             BotonGestionLibros.FlatAppearance.BorderSize = 0;
             BotonGestionLibros.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 165, 36);
             BotonGestionLibros.FlatStyle = FlatStyle.Flat;
-            BotonGestionLibros.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Bold);
+            BotonGestionLibros.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
+            BotonGestionLibros.ForeColor = Color.Black;
             BotonGestionLibros.Image = (Image)resources.GetObject("BotonGestionLibros.Image");
             BotonGestionLibros.ImageAlign = ContentAlignment.MiddleLeft;
             BotonGestionLibros.Location = new Point(0, 150);
@@ -392,11 +397,12 @@
             BotonGestionLibros.TabIndex = 1;
             BotonGestionLibros.Text = "Gestion Libros";
             BotonGestionLibros.TextAlign = ContentAlignment.MiddleRight;
-            BotonGestionLibros.UseVisualStyleBackColor = true;
+            BotonGestionLibros.UseVisualStyleBackColor = false;
             BotonGestionLibros.Click += BotonGestionLibros_Click;
             // 
             // panel1
             // 
+            panel1.BackColor = Color.FromArgb(244, 162, 97);
             panel1.Controls.Add(lblTituloApp);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
@@ -407,35 +413,47 @@
             // lblTituloApp
             // 
             lblTituloApp.AutoSize = true;
-            lblTituloApp.Font = new Font("Aston Script Bold", 22F, FontStyle.Bold);
-            lblTituloApp.Location = new Point(17, 38);
+            lblTituloApp.Font = new Font("Britannic Bold", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblTituloApp.Location = new Point(77, 37);
             lblTituloApp.Name = "lblTituloApp";
-            lblTituloApp.Size = new Size(246, 77);
+            lblTituloApp.Size = new Size(137, 44);
             lblTituloApp.TabIndex = 6;
-            lblTituloApp.Text = "Biblioteca";
+            lblTituloApp.Text = "Tienda";
             // 
             // panel2
             // 
+            panel2.BackColor = Color.FromArgb(244, 162, 97);
             panel2.Dock = DockStyle.Bottom;
-            panel2.Location = new Point(0, 688);
+            panel2.Location = new Point(0, 908);
             panel2.Name = "panel2";
             panel2.Size = new Size(280, 27);
             panel2.TabIndex = 8;
+            panel2.Paint += panel2_Paint;
             // 
             // panelChildForm
             // 
+            panelChildForm.BackColor = Color.Snow;
+            panelChildForm.Controls.Add(label1);
             panelChildForm.Controls.Add(lblMensajeUser);
             panelChildForm.Controls.Add(lblBienvenida);
-            panelChildForm.Font = new Font("Aston Script Bold", 10.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            panelChildForm.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             panelChildForm.Location = new Point(330, 121);
             panelChildForm.Name = "panelChildForm";
-            panelChildForm.Size = new Size(1000, 600);
+            panelChildForm.Size = new Size(1000, 850);
             panelChildForm.TabIndex = 2;
+            // 
+            // label1
+            // 
+            label1.Image = (Image)resources.GetObject("label1.Image");
+            label1.Location = new Point(211, 154);
+            label1.Name = "label1";
+            label1.Size = new Size(672, 446);
+            label1.TabIndex = 9;
             // 
             // lblMensajeUser
             // 
             lblMensajeUser.Dock = DockStyle.Top;
-            lblMensajeUser.Font = new Font("Aston Script Bold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblMensajeUser.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblMensajeUser.Location = new Point(0, 77);
             lblMensajeUser.Name = "lblMensajeUser";
             lblMensajeUser.Size = new Size(1000, 78);
@@ -446,7 +464,7 @@
             // lblBienvenida
             // 
             lblBienvenida.Dock = DockStyle.Top;
-            lblBienvenida.Font = new Font("Aston Script Bold", 22F, FontStyle.Bold);
+            lblBienvenida.Font = new Font("Microsoft Sans Serif", 22F, FontStyle.Bold);
             lblBienvenida.Location = new Point(0, 0);
             lblBienvenida.Name = "lblBienvenida";
             lblBienvenida.Size = new Size(1000, 77);
@@ -458,8 +476,9 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Snow;
             BackgroundImageLayout = ImageLayout.Zoom;
-            ClientSize = new Size(1380, 780);
+            ClientSize = new Size(1367, 1000);
             Controls.Add(panelChildForm);
             Controls.Add(panelMenuPrincipal);
             Controls.Add(barraTitulo);
@@ -509,5 +528,6 @@
         private Panel panel2;
         private Button btnCerrarSesion;
         private Button button1;
+        private Label label1;
     }
 }

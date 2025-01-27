@@ -30,6 +30,9 @@ namespace Proyecto2GUI
             int redondeo = 13;
             Rectangle rect = this.ClientRectangle;
 
+           
+
+
             // Agregar los segmentos curvos y rectos
             path.AddArc(rect.X, rect.Y, redondeo * 2, redondeo * 2, 180, 90);
             path.AddLine(rect.X + redondeo, rect.Y, rect.Right - redondeo, rect.Y);
@@ -147,7 +150,7 @@ namespace Proyecto2GUI
         private void btnEditarUsuario_Click(object sender, EventArgs e)
         {
             OcultarBienvenida();
-           // openChildForm(new BiblioEditarUsuario(_biblioteca));
+            // openChildForm(new BiblioEditarUsuario(_biblioteca));
             //Code...
 
             hideSubMenu();
@@ -240,6 +243,11 @@ namespace Proyecto2GUI
             //openChildForm( );
             //Code...
             hideSubMenu();
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
