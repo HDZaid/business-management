@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainBibliotecario));
             barraTitulo = new Panel();
+            label3 = new Label();
             tituloBarraBibliotecario = new Label();
             btnMinimizar = new PictureBox();
             btnCerrar = new PictureBox();
@@ -56,7 +57,6 @@
             label1 = new Label();
             lblMensajeUser = new Label();
             lblBienvenida = new Label();
-            label3 = new Label();
             barraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnMinimizar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnCerrar).BeginInit();
@@ -82,6 +82,17 @@
             barraTitulo.TabIndex = 0;
             barraTitulo.Paint += barraTitulo_Paint;
             barraTitulo.MouseDown += barraTitulo_MouseDown;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.ForeColor = SystemColors.ButtonHighlight;
+            label3.Location = new Point(688, 17);
+            label3.Name = "label3";
+            label3.Size = new Size(80, 28);
+            label3.TabIndex = 12;
+            label3.Text = "BizFlow";
             // 
             // tituloBarraBibliotecario
             // 
@@ -223,10 +234,10 @@
             BotonGenInformes.ImageAlign = ContentAlignment.MiddleLeft;
             BotonGenInformes.Location = new Point(0, 478);
             BotonGenInformes.Name = "BotonGenInformes";
-            BotonGenInformes.Padding = new Padding(20, 0, 15, 0);
+            BotonGenInformes.Padding = new Padding(20, 0, 77, 0);
             BotonGenInformes.Size = new Size(292, 60);
             BotonGenInformes.TabIndex = 5;
-            BotonGenInformes.Text = "Generar Informes";
+            BotonGenInformes.Text = "Financiero";
             BotonGenInformes.TextAlign = ContentAlignment.MiddleRight;
             BotonGenInformes.UseVisualStyleBackColor = false;
             BotonGenInformes.Click += BotonGenInformes_Click;
@@ -297,10 +308,10 @@
             BotonGestUsuarios.ImageAlign = ContentAlignment.MiddleLeft;
             BotonGestUsuarios.Location = new Point(0, 334);
             BotonGestUsuarios.Name = "BotonGestUsuarios";
-            BotonGestUsuarios.Padding = new Padding(20, 0, 24, 0);
+            BotonGestUsuarios.Padding = new Padding(20, 0, 110, 0);
             BotonGestUsuarios.Size = new Size(292, 60);
             BotonGestUsuarios.TabIndex = 3;
-            BotonGestUsuarios.Text = "Gestion Usuarios";
+            BotonGestUsuarios.Text = "Ventas";
             BotonGestUsuarios.TextAlign = ContentAlignment.MiddleRight;
             BotonGestUsuarios.UseVisualStyleBackColor = false;
             BotonGestUsuarios.Click += BotonGestLibros_Click;
@@ -487,17 +498,6 @@
             lblBienvenida.TabIndex = 7;
             lblBienvenida.Text = "Bienvenid@: ";
             lblBienvenida.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.ForeColor = SystemColors.ButtonHighlight;
-            label3.Location = new Point(688, 17);
-            label3.Name = "label3";
-            label3.Size = new Size(80, 28);
-            label3.TabIndex = 12;
-            label3.Text = "BizFlow";
             // 
             // mainBibliotecario
             // 

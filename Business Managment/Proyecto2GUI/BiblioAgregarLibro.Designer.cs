@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BiblioAgregarLibro));
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             label1 = new Label();
             panel1 = new Panel();
             button1 = new Button();
@@ -47,21 +47,22 @@
             label3 = new Label();
             label2 = new Label();
             DGVArticulos = new DataGridView();
+            panel2 = new Panel();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)DGVArticulos).BeginInit();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // label1
             // 
-            label1.BackColor = Color.FromArgb(240, 235, 220);
-            label1.BorderStyle = BorderStyle.Fixed3D;
+            label1.BackColor = Color.FromArgb(224, 224, 224);
             label1.Dock = DockStyle.Top;
             label1.FlatStyle = FlatStyle.Popup;
             label1.Font = new Font("Arial Rounded MT Bold", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(244, 162, 97);
             label1.Location = new Point(0, 0);
             label1.Name = "label1";
-            label1.Size = new Size(905, 190);
+            label1.Size = new Size(1042, 190);
             label1.TabIndex = 8;
             label1.Text = "Agregar Producto";
             label1.TextAlign = ContentAlignment.MiddleCenter;
@@ -69,7 +70,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.FromArgb(240, 235, 220);
+            panel1.BackColor = Color.FromArgb(224, 224, 224);
             panel1.Controls.Add(button1);
             panel1.Controls.Add(txtprecio);
             panel1.Controls.Add(label6);
@@ -86,7 +87,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 190);
             panel1.Name = "panel1";
-            panel1.Size = new Size(905, 293);
+            panel1.Size = new Size(1042, 293);
             panel1.TabIndex = 9;
             // 
             // button1
@@ -116,7 +117,7 @@
             txtprecio.BackColor = Color.SeaShell;
             txtprecio.BorderStyle = BorderStyle.None;
             txtprecio.Font = new Font("Microsoft Sans Serif", 10.8F);
-            txtprecio.Location = new Point(235, 200);
+            txtprecio.Location = new Point(235, 202);
             txtprecio.Name = "txtprecio";
             txtprecio.Size = new Size(437, 21);
             txtprecio.TabIndex = 12;
@@ -126,7 +127,7 @@
             label6.AutoSize = true;
             label6.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
             label6.ForeColor = Color.FromArgb(244, 162, 97);
-            label6.Location = new Point(92, 198);
+            label6.Location = new Point(95, 198);
             label6.Name = "label6";
             label6.Size = new Size(93, 25);
             label6.TabIndex = 11;
@@ -180,7 +181,7 @@
             txtcantidad.BackColor = Color.SeaShell;
             txtcantidad.BorderStyle = BorderStyle.None;
             txtcantidad.Font = new Font("Microsoft Sans Serif", 10.8F);
-            txtcantidad.Location = new Point(235, 156);
+            txtcantidad.Location = new Point(235, 160);
             txtcantidad.Name = "txtcantidad";
             txtcantidad.Size = new Size(437, 21);
             txtcantidad.TabIndex = 8;
@@ -190,7 +191,7 @@
             txtmarca.BackColor = Color.SeaShell;
             txtmarca.BorderStyle = BorderStyle.None;
             txtmarca.Font = new Font("Microsoft Sans Serif", 10.8F);
-            txtmarca.Location = new Point(235, 115);
+            txtmarca.Location = new Point(235, 119);
             txtmarca.Name = "txtmarca";
             txtmarca.Size = new Size(437, 21);
             txtmarca.TabIndex = 7;
@@ -200,7 +201,7 @@
             txtnombre.BackColor = Color.SeaShell;
             txtnombre.BorderStyle = BorderStyle.None;
             txtnombre.Font = new Font("Microsoft Sans Serif", 10.8F);
-            txtnombre.Location = new Point(235, 76);
+            txtnombre.Location = new Point(235, 78);
             txtnombre.Name = "txtnombre";
             txtnombre.Size = new Size(437, 21);
             txtnombre.TabIndex = 6;
@@ -220,7 +221,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
             label5.ForeColor = Color.FromArgb(244, 162, 97);
-            label5.Location = new Point(92, 156);
+            label5.Location = new Point(95, 156);
             label5.Name = "label5";
             label5.Size = new Size(123, 25);
             label5.TabIndex = 3;
@@ -253,7 +254,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
             label2.ForeColor = Color.LightSalmon;
-            label2.Location = new Point(139, 37);
+            label2.Location = new Point(95, 36);
             label2.Name = "label2";
             label2.Size = new Size(33, 25);
             label2.TabIndex = 0;
@@ -261,40 +262,49 @@
             // 
             // DGVArticulos
             // 
-            DGVArticulos.BackgroundColor = Color.FromArgb(240, 235, 220);
+            DGVArticulos.BackgroundColor = Color.White;
             DGVArticulos.BorderStyle = BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.LightCoral;
-            dataGridViewCellStyle1.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = Color.Azure;
-            dataGridViewCellStyle1.SelectionBackColor = Color.LightBlue;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            DGVArticulos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.LightCoral;
+            dataGridViewCellStyle3.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.ForeColor = Color.Azure;
+            dataGridViewCellStyle3.SelectionBackColor = Color.LightBlue;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            DGVArticulos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             DGVArticulos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.SeaShell;
-            dataGridViewCellStyle2.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = Color.PaleTurquoise;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            DGVArticulos.DefaultCellStyle = dataGridViewCellStyle2;
-            DGVArticulos.GridColor = Color.Beige;
-            DGVArticulos.Location = new Point(101, 435);
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = Color.SeaShell;
+            dataGridViewCellStyle4.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle4.ForeColor = Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = Color.PaleTurquoise;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
+            DGVArticulos.DefaultCellStyle = dataGridViewCellStyle4;
+            DGVArticulos.GridColor = Color.FloralWhite;
+            DGVArticulos.Location = new Point(123, 14);
             DGVArticulos.Margin = new Padding(3, 4, 3, 4);
             DGVArticulos.Name = "DGVArticulos";
             DGVArticulos.RowHeadersWidth = 51;
             DGVArticulos.Size = new Size(801, 329);
             DGVArticulos.TabIndex = 10;
             // 
+            // panel2
+            // 
+            panel2.Controls.Add(DGVArticulos);
+            panel2.Dock = DockStyle.Bottom;
+            panel2.Location = new Point(0, 481);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(1042, 377);
+            panel2.TabIndex = 10;
+            // 
             // BiblioAgregarLibro
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(240, 235, 220);
-            ClientSize = new Size(905, 889);
-            Controls.Add(DGVArticulos);
+            BackColor = Color.FromArgb(224, 224, 224);
+            ClientSize = new Size(1042, 858);
+            Controls.Add(panel2);
             Controls.Add(panel1);
             Controls.Add(label1);
             Name = "BiblioAgregarLibro";
@@ -302,6 +312,7 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)DGVArticulos).EndInit();
+            panel2.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -321,7 +332,8 @@
         private Button btnguardar;
         private Label label6;
         private TextBox txtprecio;
-        private DataGridView DGVArticulos;
         private Button button1;
+        private DataGridView DGVArticulos;
+        private Panel panel2;
     }
 }
