@@ -50,14 +50,14 @@
             panel1.Controls.Add(RecibirBuscar);
             panel1.Controls.Add(label2);
             panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 150);
+            panel1.Location = new Point(0, 132);
             panel1.Name = "panel1";
             panel1.Size = new Size(1042, 418);
             panel1.TabIndex = 11;
             // 
             // btnBuscarLibro
             // 
-            btnBuscarLibro.BackColor = Color.FromArgb(230, 165, 36);
+            btnBuscarLibro.BackColor = Color.FromArgb(156, 215, 230);
             btnBuscarLibro.Cursor = Cursors.Hand;
             btnBuscarLibro.FlatAppearance.BorderSize = 0;
             btnBuscarLibro.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 165, 36);
@@ -67,9 +67,10 @@
             btnBuscarLibro.ImageAlign = ContentAlignment.MiddleLeft;
             btnBuscarLibro.Location = new Point(740, 33);
             btnBuscarLibro.Name = "btnBuscarLibro";
+            btnBuscarLibro.Padding = new Padding(10, 0, 30, 0);
             btnBuscarLibro.Size = new Size(146, 40);
             btnBuscarLibro.TabIndex = 11;
-            btnBuscarLibro.Text = "Buscar Libro";
+            btnBuscarLibro.Text = "Buscar";
             btnBuscarLibro.TextAlign = ContentAlignment.MiddleRight;
             btnBuscarLibro.UseVisualStyleBackColor = false;
             btnBuscarLibro.Click += btnBuscarLibro_Click;
@@ -144,7 +145,7 @@
             label1.Font = new Font("Segoe UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 238);
             label1.Location = new Point(0, 0);
             label1.Name = "label1";
-            label1.Size = new Size(1042, 150);
+            label1.Size = new Size(1042, 132);
             label1.TabIndex = 10;
             label1.Text = "Buscar Producto";
             label1.TextAlign = ContentAlignment.MiddleCenter;

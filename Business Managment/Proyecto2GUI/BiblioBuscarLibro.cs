@@ -20,6 +20,7 @@ namespace Proyecto2GUI
             _bibliotecaActual = biblioteca;   
             InitializeComponent();
             lblMensajeUsuario.Text = String.Empty;
+            BotonRedondeadoHelper.AplicarRedondeo(btnBuscarLibro, 30);
         }
 
         private void btnBuscarLibro_Click(object sender, EventArgs e)

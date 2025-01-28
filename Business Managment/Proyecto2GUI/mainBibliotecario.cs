@@ -30,10 +30,7 @@ namespace Proyecto2GUI
             int redondeo = 13;
             Rectangle rect = this.ClientRectangle;
 
-           
-
-
-            // Agregar los segmentos curvos y rectos
+            //Agregar los segmentos curvos y rectos
             path.AddArc(rect.X, rect.Y, redondeo * 2, redondeo * 2, 180, 90);
             path.AddLine(rect.X + redondeo, rect.Y, rect.Right - redondeo, rect.Y);
             path.AddArc(rect.Right - redondeo * 2, rect.Y, redondeo * 2, redondeo * 2, 270, 90);

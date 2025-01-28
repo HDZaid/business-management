@@ -43,6 +43,9 @@ namespace Proyecto2GUI
             this.KeyDown += new KeyEventHandler(Form_KeyDown);
             this.txtNombre.KeyDown += new KeyEventHandler(Form_KeyDown);
             this.txtPassword.KeyDown += new KeyEventHandler(Form_KeyDown);
+
+            BotonRedondeadoHelper.AplicarRedondeo(BtnEntrar, 28);
+            BotonRedondeadoHelper.AplicarRedondeo(btnSalir, 28);
         }
         private void Form_KeyDown(object sender, KeyEventArgs e)
         {
