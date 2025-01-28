@@ -284,20 +284,20 @@
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
             DGVArticulos.DefaultCellStyle = dataGridViewCellStyle2;
             DGVArticulos.GridColor = Color.FloralWhite;
-            DGVArticulos.Location = new Point(123, 14);
+            DGVArticulos.Location = new Point(218, 4);
             DGVArticulos.Margin = new Padding(3, 4, 3, 4);
             DGVArticulos.Name = "DGVArticulos";
             DGVArticulos.RowHeadersWidth = 51;
-            DGVArticulos.Size = new Size(801, 271);
+            DGVArticulos.Size = new Size(694, 318);
             DGVArticulos.TabIndex = 10;
             // 
             // panel2
             // 
             panel2.Controls.Add(DGVArticulos);
             panel2.Dock = DockStyle.Bottom;
-            panel2.Location = new Point(0, 334);
+            panel2.Location = new Point(0, 340);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1042, 305);
+            panel2.Size = new Size(1042, 376);
             panel2.TabIndex = 10;
             // 
             // BiblioAgregarLibro
@@ -305,7 +305,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(224, 224, 224);
-            ClientSize = new Size(1042, 639);
+            ClientSize = new Size(1042, 716);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Controls.Add(label1);

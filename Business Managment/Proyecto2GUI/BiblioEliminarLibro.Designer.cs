@@ -50,12 +50,12 @@
             // label1
             // 
             label1.Dock = DockStyle.Top;
-            label1.Font = new Font("Aston Script Bold", 22F, FontStyle.Bold);
+            label1.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Bold);
             label1.Location = new Point(0, 0);
             label1.Name = "label1";
-            label1.Size = new Size(982, 150);
+            label1.Size = new Size(982, 116);
             label1.TabIndex = 11;
-            label1.Text = "Eliminar Libro";
+            label1.Text = "Compras y Proveedores";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // panel1
@@ -73,7 +73,7 @@
             panel1.Controls.Add(RecibirBuscar);
             panel1.Controls.Add(label2);
             panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 150);
+            panel1.Location = new Point(0, 116);
             panel1.Name = "panel1";
             panel1.Size = new Size(982, 305);
             panel1.TabIndex = 12;
@@ -114,9 +114,9 @@
             label6.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Bold);
             label6.Location = new Point(150, 185);
             label6.Name = "label6";
-            label6.Size = new Size(149, 27);
+            label6.Size = new Size(168, 27);
             label6.TabIndex = 17;
-            label6.Text = "Disponibilidad:";
+            label6.Text = "Precio (Original):";
             // 
             // label5
             // 
@@ -124,9 +124,9 @@
             label5.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Bold);
             label5.Location = new Point(150, 158);
             label5.Name = "label5";
-            label5.Size = new Size(71, 27);
+            label5.Size = new Size(99, 27);
             label5.TabIndex = 16;
-            label5.Text = "Autor:";
+            label5.Text = "Producto";
             // 
             // label4
             // 
@@ -134,9 +134,9 @@
             label4.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Bold);
             label4.Location = new Point(150, 127);
             label4.Name = "label4";
-            label4.Size = new Size(71, 27);
+            label4.Size = new Size(114, 27);
             label4.TabIndex = 15;
-            label4.Text = "Titulo:";
+            label4.Text = "Proveedor:";
             // 
             // lblISBN
             // 
@@ -144,13 +144,13 @@
             lblISBN.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Bold);
             lblISBN.Location = new Point(389, 88);
             lblISBN.Name = "lblISBN";
-            lblISBN.Size = new Size(59, 27);
+            lblISBN.Size = new Size(181, 27);
             lblISBN.TabIndex = 14;
-            lblISBN.Text = "ISBN";
+            lblISBN.Text = "Codigo Proveedor";
             // 
             // button2
             // 
-            button2.BackColor = Color.FromArgb(230, 165, 36);
+            button2.BackColor = Color.FromArgb(156, 215, 230);
             button2.Cursor = Cursors.Hand;
             button2.FlatAppearance.BorderSize = 0;
             button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 165, 36);
@@ -160,7 +160,7 @@
             button2.Location = new Point(730, 188);
             button2.Name = "button2";
             button2.Padding = new Padding(0, 0, 38, 0);
-            button2.Size = new Size(146, 40);
+            button2.Size = new Size(150, 40);
             button2.TabIndex = 13;
             button2.Text = "Cancelar";
             button2.TextAlign = ContentAlignment.MiddleRight;
@@ -169,26 +169,26 @@
             // 
             // btnEliminarLibro
             // 
-            btnEliminarLibro.BackColor = Color.DarkRed;
+            btnEliminarLibro.BackColor = Color.LightCoral;
             btnEliminarLibro.Cursor = Cursors.Hand;
             btnEliminarLibro.FlatAppearance.BorderSize = 0;
             btnEliminarLibro.FlatAppearance.MouseOverBackColor = Color.Tomato;
             btnEliminarLibro.FlatStyle = FlatStyle.Flat;
             btnEliminarLibro.Font = new Font("Segoe UI Variable Small Semibol", 9F, FontStyle.Bold);
-            btnEliminarLibro.ForeColor = Color.White;
+            btnEliminarLibro.ForeColor = Color.Black;
             btnEliminarLibro.ImageAlign = ContentAlignment.MiddleLeft;
-            btnEliminarLibro.Location = new Point(730, 129);
+            btnEliminarLibro.Location = new Point(730, 127);
             btnEliminarLibro.Name = "btnEliminarLibro";
-            btnEliminarLibro.Size = new Size(146, 40);
+            btnEliminarLibro.Size = new Size(150, 40);
             btnEliminarLibro.TabIndex = 12;
-            btnEliminarLibro.Text = "Eliminar Libro";
+            btnEliminarLibro.Text = "Eliminar Proveedor";
             btnEliminarLibro.TextAlign = ContentAlignment.MiddleRight;
             btnEliminarLibro.UseVisualStyleBackColor = false;
             btnEliminarLibro.Click += btnEliminarLibro_Click;
             // 
             // btnBuscarLibro
             // 
-            btnBuscarLibro.BackColor = Color.FromArgb(230, 165, 36);
+            btnBuscarLibro.BackColor = Color.FromArgb(156, 215, 230);
             btnBuscarLibro.Cursor = Cursors.Hand;
             btnBuscarLibro.FlatAppearance.BorderSize = 0;
             btnBuscarLibro.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 165, 36);
@@ -198,9 +198,10 @@
             btnBuscarLibro.ImageAlign = ContentAlignment.MiddleLeft;
             btnBuscarLibro.Location = new Point(730, 34);
             btnBuscarLibro.Name = "btnBuscarLibro";
-            btnBuscarLibro.Size = new Size(146, 40);
+            btnBuscarLibro.Padding = new Padding(10, 0, 20, 0);
+            btnBuscarLibro.Size = new Size(150, 40);
             btnBuscarLibro.TabIndex = 11;
-            btnBuscarLibro.Text = "Buscar Libro";
+            btnBuscarLibro.Text = "Buscar";
             btnBuscarLibro.TextAlign = ContentAlignment.MiddleRight;
             btnBuscarLibro.UseVisualStyleBackColor = false;
             btnBuscarLibro.Click += btnBuscarLibro_Click_1;
@@ -219,11 +220,11 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Bold);
-            label2.Location = new Point(112, 38);
+            label2.Location = new Point(72, 38);
             label2.Name = "label2";
-            label2.Size = new Size(138, 27);
+            label2.Size = new Size(196, 27);
             label2.TabIndex = 0;
-            label2.Text = "Ingrese ISBN:";
+            label2.Text = "Nombre Proveedor:";
             // 
             // lblMensajeUsuario
             // 
