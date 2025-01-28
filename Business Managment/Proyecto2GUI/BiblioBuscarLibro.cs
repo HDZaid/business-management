@@ -24,46 +24,50 @@ namespace Proyecto2GUI
 
         private void btnBuscarLibro_Click(object sender, EventArgs e)
         {
-            _dataLibrosEncontrados = new DataTable();
+            try
+            {
+                int IDbuscado = int.Parse(RecibirBuscar.Text); // Convertir el texto a entero.
+                Articulo articulo = ArticuloLogica.Instancia.ObtenerPorID(IDbuscado); // Buscar el artículo.
 
-            _dataLibrosEncontrados.Columns.Add("ISBN");
-            _dataLibrosEncontrados.Columns.Add("Titulo");
-            _dataLibrosEncontrados.Columns.Add("Autor");
-            _dataLibrosEncontrados.Columns.Add("Disponibilidad");
-            TablaLibrosBuscados.DataSource = _dataLibrosEncontrados;
-            Consultar();
-            Limpiar();
+                if (articulo != null) // Verificar si se encontró el artículo.
+                {
+                    // Convertir el objeto en una lista con un solo elemento.
+                    TablaLibrosBuscados.DataSource = new List<Articulo> { articulo };
+                }
+                else
+                {
+                    MessageBox.Show("No se encontró ningún artículo con el ID especificado.");
+                    TablaLibrosBuscados.DataSource = null; // Limpiar la tabla si no hay resultados.
+                }
+
+                TablaLibrosBuscados.Show(); // Mostrar la tabla.
+                //Limpiar(); // Limpiar los campos de entrada.
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Por favor, ingrese un ID válido.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ocurrió un error: {ex.Message}");
+            }
         }
-
+        /*
         private void Consultar()
         {
-            lblMensajeUsuario.Text = String.Empty;
-
-            var librosEncontrados = _bibliotecaActual.BuscarLibrosPorTituloOAutor(RecibirBuscar.Text);
-
-            if (librosEncontrados == null || !librosEncontrados.Any())
-            {
-                lblMensajeUsuario.Text = "No se encontraron resultados para la búsqueda.";
-                return;
-            }
-
-            _dataLibrosEncontrados.Rows.Clear();
-
-            foreach (var item in librosEncontrados)
-            {
-                DataRow fila = _dataLibrosEncontrados.NewRow();
-                fila["ISBN"] = item.ISBN;
-                fila["Titulo"] = item.Titulo;
-                fila["Autor"] = item.Autor;
-                fila["Disponibilidad"] = item.Disponible ? "Disponible" : "No Disponible";
-
-                _dataLibrosEncontrados.Rows.Add(fila);
-            }
+            
         }
-
+        */
         private void Limpiar()
         {
             RecibirBuscar.Text = String.Empty;
         }
+
+        /*ublic void mostrar_Articulo()
+        {
+            TablaLibrosBuscados.DataSource = null;
+            TablaLibrosBuscados.DataSource = ArticuloLogica.Instancia.ObtenerPorID();
+        }
+        */
     }
 }

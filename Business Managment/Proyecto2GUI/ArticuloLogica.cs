@@ -154,6 +154,37 @@ namespace Proyecto2GUI
             return respuesta;
         }
 
+        public Articulo ObtenerPorID(int id)
+        {
+            Articulo articulo = null; // Inicializamos el objeto en null para manejar casos en los que no se encuentre el artículo.
+
+            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+            {
+                conexion.Open();
+                string query = "SELECT * FROM Articulo WHERE ID = @ID"; // Usamos un parámetro para evitar inyección SQL.
+                SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@ID", id); // Agregamos el parámetro ID.
+
+                // Ejecutamos el comando y leemos los resultados.
+                using (SQLiteDataReader dr = cmd.ExecuteReader())
+                {
+                    if (dr.Read()) // Si encuentra un registro.
+                    {
+                        articulo = new Articulo()
+                        {
+                            ID = int.Parse(dr["ID"].ToString()),
+                            Nombre = dr["Nombre"].ToString(),
+                            Marca = dr["Marca"].ToString(),
+                            Cantidad = int.Parse(dr["Cantidad"].ToString()),
+                            Precio = int.Parse(dr["Precio"].ToString()),
+                        };
+                    }
+                }
+            }
+
+            return articulo; // Devuelve el artículo encontrado o null si no existe.
+        }
 
     }
 }
