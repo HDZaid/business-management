@@ -52,7 +52,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 150);
             panel1.Name = "panel1";
-            panel1.Size = new Size(982, 343);
+            panel1.Size = new Size(1042, 418);
             panel1.TabIndex = 11;
             // 
             // btnBuscarLibro
@@ -96,7 +96,7 @@
             TablaLibrosBuscados.Cursor = Cursors.Hand;
             TablaLibrosBuscados.EnableHeadersVisualStyles = false;
             TablaLibrosBuscados.GridColor = Color.FromArgb(49, 53, 56);
-            TablaLibrosBuscados.Location = new Point(239, 93);
+            TablaLibrosBuscados.Location = new Point(183, 93);
             TablaLibrosBuscados.Name = "TablaLibrosBuscados";
             TablaLibrosBuscados.ReadOnly = true;
             TablaLibrosBuscados.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
@@ -115,7 +115,7 @@
             dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(230, 165, 36);
             TablaLibrosBuscados.RowsDefaultCellStyle = dataGridViewCellStyle3;
             TablaLibrosBuscados.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            TablaLibrosBuscados.Size = new Size(632, 187);
+            TablaLibrosBuscados.Size = new Size(692, 262);
             TablaLibrosBuscados.TabIndex = 10;
             // 
             // RecibirBuscar
@@ -132,21 +132,21 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Bold);
-            label2.Location = new Point(99, 37);
+            label2.Location = new Point(138, 40);
             label2.Name = "label2";
-            label2.Size = new Size(152, 27);
+            label2.Size = new Size(115, 27);
             label2.TabIndex = 0;
-            label2.Text = "Titulo o Autor: ";
+            label2.Text = "Parametro:";
             // 
             // label1
             // 
             label1.Dock = DockStyle.Top;
-            label1.Font = new Font("Aston Script Bold", 22F, FontStyle.Bold);
+            label1.Font = new Font("Segoe UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 238);
             label1.Location = new Point(0, 0);
             label1.Name = "label1";
-            label1.Size = new Size(982, 150);
+            label1.Size = new Size(1042, 150);
             label1.TabIndex = 10;
-            label1.Text = "Buscar Libro";
+            label1.Text = "Buscar Producto";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblMensajeUsuario
@@ -154,9 +154,9 @@
             lblMensajeUsuario.Dock = DockStyle.Bottom;
             lblMensajeUsuario.Font = new Font("Segoe UI Variable Small", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblMensajeUsuario.ForeColor = Color.Goldenrod;
-            lblMensajeUsuario.Location = new Point(0, 496);
+            lblMensajeUsuario.Location = new Point(0, 616);
             lblMensajeUsuario.Name = "lblMensajeUsuario";
-            lblMensajeUsuario.Size = new Size(982, 57);
+            lblMensajeUsuario.Size = new Size(1042, 57);
             lblMensajeUsuario.TabIndex = 29;
             lblMensajeUsuario.Text = "Mensaje";
             lblMensajeUsuario.TextAlign = ContentAlignment.MiddleCenter;
@@ -165,7 +165,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(982, 553);
+            ClientSize = new Size(1042, 673);
             Controls.Add(lblMensajeUsuario);
             Controls.Add(panel1);
             Controls.Add(label1);

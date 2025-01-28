@@ -78,7 +78,7 @@
             barraTitulo.Dock = DockStyle.Top;
             barraTitulo.Location = new Point(0, 0);
             barraTitulo.Name = "barraTitulo";
-            barraTitulo.Size = new Size(1450, 65);
+            barraTitulo.Size = new Size(1480, 65);
             barraTitulo.TabIndex = 0;
             barraTitulo.Paint += barraTitulo_Paint;
             barraTitulo.MouseDown += barraTitulo_MouseDown;
@@ -109,7 +109,7 @@
             // 
             btnMinimizar.Cursor = Cursors.Hand;
             btnMinimizar.Image = (Image)resources.GetObject("btnMinimizar.Image");
-            btnMinimizar.Location = new Point(1344, 12);
+            btnMinimizar.Location = new Point(1378, 12);
             btnMinimizar.Name = "btnMinimizar";
             btnMinimizar.Size = new Size(40, 40);
             btnMinimizar.SizeMode = PictureBoxSizeMode.Zoom;
@@ -121,7 +121,7 @@
             // 
             btnCerrar.Cursor = Cursors.Hand;
             btnCerrar.Image = (Image)resources.GetObject("btnCerrar.Image");
-            btnCerrar.Location = new Point(1398, 12);
+            btnCerrar.Location = new Point(1428, 12);
             btnCerrar.Name = "btnCerrar";
             btnCerrar.Size = new Size(40, 40);
             btnCerrar.SizeMode = PictureBoxSizeMode.Zoom;
@@ -153,7 +153,7 @@
             btnCerrarSesion.Cursor = Cursors.Hand;
             btnCerrarSesion.Dock = DockStyle.Bottom;
             btnCerrarSesion.FlatAppearance.BorderSize = 0;
-            btnCerrarSesion.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 165, 36);
+            btnCerrarSesion.FlatAppearance.MouseOverBackColor = Color.FromArgb(115, 193, 203);
             btnCerrarSesion.FlatStyle = FlatStyle.Flat;
             btnCerrarSesion.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
             btnCerrarSesion.Image = (Image)resources.GetObject("btnCerrarSesion.Image");
@@ -185,7 +185,7 @@
             btnEstadisticas.Cursor = Cursors.Hand;
             btnEstadisticas.Dock = DockStyle.Top;
             btnEstadisticas.FlatAppearance.BorderSize = 0;
-            btnEstadisticas.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 165, 36);
+            btnEstadisticas.FlatAppearance.MouseOverBackColor = Color.FromArgb(238, 173, 163);
             btnEstadisticas.FlatStyle = FlatStyle.Flat;
             btnEstadisticas.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold);
             btnEstadisticas.Image = (Image)resources.GetObject("btnEstadisticas.Image");
@@ -206,7 +206,7 @@
             btnPrestamos.Cursor = Cursors.Hand;
             btnPrestamos.Dock = DockStyle.Top;
             btnPrestamos.FlatAppearance.BorderSize = 0;
-            btnPrestamos.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 165, 36);
+            btnPrestamos.FlatAppearance.MouseOverBackColor = Color.FromArgb(238, 173, 163);
             btnPrestamos.FlatStyle = FlatStyle.Flat;
             btnPrestamos.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold);
             btnPrestamos.Image = (Image)resources.GetObject("btnPrestamos.Image");
@@ -227,7 +227,7 @@
             BotonGenInformes.Cursor = Cursors.Hand;
             BotonGenInformes.Dock = DockStyle.Top;
             BotonGenInformes.FlatAppearance.BorderSize = 0;
-            BotonGenInformes.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 165, 36);
+            BotonGenInformes.FlatAppearance.MouseOverBackColor = Color.FromArgb(115, 193, 203);
             BotonGenInformes.FlatStyle = FlatStyle.Flat;
             BotonGenInformes.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
             BotonGenInformes.Image = (Image)resources.GetObject("BotonGenInformes.Image");
@@ -259,7 +259,7 @@
             btnEditarUsuario.Cursor = Cursors.Hand;
             btnEditarUsuario.Dock = DockStyle.Top;
             btnEditarUsuario.FlatAppearance.BorderSize = 0;
-            btnEditarUsuario.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 165, 36);
+            btnEditarUsuario.FlatAppearance.MouseOverBackColor = Color.FromArgb(238, 173, 163);
             btnEditarUsuario.FlatStyle = FlatStyle.Flat;
             btnEditarUsuario.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold);
             btnEditarUsuario.Image = (Image)resources.GetObject("btnEditarUsuario.Image");
@@ -280,7 +280,7 @@
             btnRegistrarUsuario.Cursor = Cursors.Hand;
             btnRegistrarUsuario.Dock = DockStyle.Top;
             btnRegistrarUsuario.FlatAppearance.BorderSize = 0;
-            btnRegistrarUsuario.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 165, 36);
+            btnRegistrarUsuario.FlatAppearance.MouseOverBackColor = Color.FromArgb(238, 173, 163);
             btnRegistrarUsuario.FlatStyle = FlatStyle.Flat;
             btnRegistrarUsuario.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold);
             btnRegistrarUsuario.Image = (Image)resources.GetObject("btnRegistrarUsuario.Image");
@@ -301,7 +301,7 @@
             BotonGestUsuarios.Cursor = Cursors.Hand;
             BotonGestUsuarios.Dock = DockStyle.Top;
             BotonGestUsuarios.FlatAppearance.BorderSize = 0;
-            BotonGestUsuarios.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 165, 36);
+            BotonGestUsuarios.FlatAppearance.MouseOverBackColor = Color.FromArgb(115, 193, 203);
             BotonGestUsuarios.FlatStyle = FlatStyle.Flat;
             BotonGestUsuarios.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
             BotonGestUsuarios.Image = (Image)resources.GetObject("BotonGestUsuarios.Image");
@@ -334,7 +334,7 @@
             btnEliminarLibro.Cursor = Cursors.Hand;
             btnEliminarLibro.Dock = DockStyle.Top;
             btnEliminarLibro.FlatAppearance.BorderSize = 0;
-            btnEliminarLibro.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 165, 36);
+            btnEliminarLibro.FlatAppearance.MouseOverBackColor = Color.FromArgb(238, 173, 163);
             btnEliminarLibro.FlatStyle = FlatStyle.Flat;
             btnEliminarLibro.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold);
             btnEliminarLibro.Image = (Image)resources.GetObject("btnEliminarLibro.Image");
@@ -355,7 +355,7 @@
             btnBuscarLibro.Cursor = Cursors.Hand;
             btnBuscarLibro.Dock = DockStyle.Top;
             btnBuscarLibro.FlatAppearance.BorderSize = 0;
-            btnBuscarLibro.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 165, 36);
+            btnBuscarLibro.FlatAppearance.MouseOverBackColor = Color.FromArgb(238, 173, 163);
             btnBuscarLibro.FlatStyle = FlatStyle.Flat;
             btnBuscarLibro.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold);
             btnBuscarLibro.Image = (Image)resources.GetObject("btnBuscarLibro.Image");
@@ -377,7 +377,7 @@
             btnRegistrarLibro.Cursor = Cursors.Hand;
             btnRegistrarLibro.Dock = DockStyle.Top;
             btnRegistrarLibro.FlatAppearance.BorderSize = 0;
-            btnRegistrarLibro.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 165, 36);
+            btnRegistrarLibro.FlatAppearance.MouseOverBackColor = Color.FromArgb(238, 173, 163);
             btnRegistrarLibro.FlatStyle = FlatStyle.Flat;
             btnRegistrarLibro.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold);
             btnRegistrarLibro.Image = (Image)resources.GetObject("btnRegistrarLibro.Image");
@@ -398,7 +398,7 @@
             BotonGestionLibros.Cursor = Cursors.Hand;
             BotonGestionLibros.Dock = DockStyle.Top;
             BotonGestionLibros.FlatAppearance.BorderSize = 0;
-            BotonGestionLibros.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 165, 36);
+            BotonGestionLibros.FlatAppearance.MouseOverBackColor = Color.FromArgb(115, 193, 203);
             BotonGestionLibros.FlatStyle = FlatStyle.Flat;
             BotonGestionLibros.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
             BotonGestionLibros.ForeColor = Color.Black;
@@ -412,6 +412,7 @@
             BotonGestionLibros.Text = "Inventario";
             BotonGestionLibros.TextAlign = ContentAlignment.MiddleRight;
             BotonGestionLibros.UseVisualStyleBackColor = false;
+            BotonGestionLibros.UseWaitCursor = true;
             BotonGestionLibros.Click += BotonGestionLibros_Click;
             // 
             // panel1
@@ -464,13 +465,13 @@
             panelChildForm.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             panelChildForm.Location = new Point(343, 110);
             panelChildForm.Name = "panelChildForm";
-            panelChildForm.Size = new Size(1060, 720);
+            panelChildForm.Size = new Size(1095, 720);
             panelChildForm.TabIndex = 2;
             // 
             // label1
             // 
             label1.Image = (Image)resources.GetObject("label1.Image");
-            label1.Location = new Point(293, 204);
+            label1.Location = new Point(304, 195);
             label1.Name = "label1";
             label1.Size = new Size(488, 446);
             label1.TabIndex = 9;
@@ -482,7 +483,7 @@
             lblMensajeUser.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold);
             lblMensajeUser.Location = new Point(0, 77);
             lblMensajeUser.Name = "lblMensajeUser";
-            lblMensajeUser.Size = new Size(1060, 78);
+            lblMensajeUser.Size = new Size(1095, 78);
             lblMensajeUser.TabIndex = 8;
             lblMensajeUser.Text = "Mensaje";
             lblMensajeUser.TextAlign = ContentAlignment.TopCenter;
@@ -494,7 +495,7 @@
             lblBienvenida.Font = new Font("Segoe UI Semibold", 24F, FontStyle.Bold);
             lblBienvenida.Location = new Point(0, 0);
             lblBienvenida.Name = "lblBienvenida";
-            lblBienvenida.Size = new Size(1060, 77);
+            lblBienvenida.Size = new Size(1095, 77);
             lblBienvenida.TabIndex = 7;
             lblBienvenida.Text = "Bienvenid@: ";
             lblBienvenida.TextAlign = ContentAlignment.MiddleCenter;
@@ -505,7 +506,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.WhiteSmoke;
             BackgroundImageLayout = ImageLayout.Zoom;
-            ClientSize = new Size(1450, 880);
+            ClientSize = new Size(1480, 880);
             Controls.Add(panelChildForm);
             Controls.Add(panelMenuPrincipal);
             Controls.Add(barraTitulo);
@@ -535,20 +536,7 @@
         private Label tituloBarraBibliotecario;
         private Panel panelMenuPrincipal;
         private Panel panel1;
-        private Button BotonGestionLibros;
-        private Panel PanelSubGestLibros;
-        private Button btnRegistrarLibro;
-        private Button btnEliminarLibro;
-        private Button btnBuscarLibro;
         private Label lblTituloApp;
-        private Panel PanelGestUsuarios;
-        private Button btnEditarUsuario;
-        private Button btnRegistrarUsuario;
-        private Button BotonGestUsuarios;
-        private Panel PanelGenInformes;
-        private Button btnEstadisticas;
-        private Button btnPrestamos;
-        private Button BotonGenInformes;
         private Panel panelChildForm;
         private Label lblMensajeUser;
         private Label lblBienvenida;
@@ -558,5 +546,18 @@
         private Label label2;
         private Label label1;
         private Label label3;
+        private Panel PanelGenInformes;
+        private Button btnEstadisticas;
+        private Button btnPrestamos;
+        private Button BotonGenInformes;
+        private Panel PanelGestUsuarios;
+        private Button btnEditarUsuario;
+        private Button btnRegistrarUsuario;
+        private Button BotonGestUsuarios;
+        private Panel PanelSubGestLibros;
+        private Button btnEliminarLibro;
+        private Button btnBuscarLibro;
+        private Button btnRegistrarLibro;
+        private Button BotonGestionLibros;
     }
 }
