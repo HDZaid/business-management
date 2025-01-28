@@ -56,6 +56,7 @@
             label1 = new Label();
             lblMensajeUser = new Label();
             lblBienvenida = new Label();
+            label3 = new Label();
             barraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnMinimizar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnCerrar).BeginInit();
@@ -70,6 +71,7 @@
             // barraTitulo
             // 
             barraTitulo.BackColor = Color.FromArgb(49, 53, 56);
+            barraTitulo.Controls.Add(label3);
             barraTitulo.Controls.Add(tituloBarraBibliotecario);
             barraTitulo.Controls.Add(btnMinimizar);
             barraTitulo.Controls.Add(btnCerrar);
@@ -118,7 +120,7 @@
             // 
             // panelMenuPrincipal
             // 
-            panelMenuPrincipal.BackColor = Color.FromArgb(244, 162, 97);
+            panelMenuPrincipal.BackColor = Color.FromArgb(56, 163, 203);
             panelMenuPrincipal.Controls.Add(btnCerrarSesion);
             panelMenuPrincipal.Controls.Add(PanelGenInformes);
             panelMenuPrincipal.Controls.Add(BotonGenInformes);
@@ -136,7 +138,7 @@
             // 
             // btnCerrarSesion
             // 
-            btnCerrarSesion.BackColor = Color.FromArgb(244, 162, 97);
+            btnCerrarSesion.BackColor = Color.FromArgb(56, 163, 203);
             btnCerrarSesion.Cursor = Cursors.Hand;
             btnCerrarSesion.Dock = DockStyle.Bottom;
             btnCerrarSesion.FlatAppearance.BorderSize = 0;
@@ -157,7 +159,7 @@
             // 
             // PanelGenInformes
             // 
-            PanelGenInformes.BackColor = Color.FromArgb(240, 211, 155);
+            PanelGenInformes.BackColor = Color.FromArgb(224, 224, 224);
             PanelGenInformes.Controls.Add(btnEstadisticas);
             PanelGenInformes.Controls.Add(btnPrestamos);
             PanelGenInformes.Dock = DockStyle.Top;
@@ -168,7 +170,7 @@
             // 
             // btnEstadisticas
             // 
-            btnEstadisticas.BackColor = Color.FromArgb(248, 191, 214);
+            btnEstadisticas.BackColor = Color.FromArgb(244, 134, 180);
             btnEstadisticas.Cursor = Cursors.Hand;
             btnEstadisticas.Dock = DockStyle.Top;
             btnEstadisticas.FlatAppearance.BorderSize = 0;
@@ -189,7 +191,7 @@
             // 
             // btnPrestamos
             // 
-            btnPrestamos.BackColor = Color.FromArgb(248, 191, 214);
+            btnPrestamos.BackColor = Color.FromArgb(244, 134, 180);
             btnPrestamos.Cursor = Cursors.Hand;
             btnPrestamos.Dock = DockStyle.Top;
             btnPrestamos.FlatAppearance.BorderSize = 0;
@@ -210,7 +212,7 @@
             // 
             // BotonGenInformes
             // 
-            BotonGenInformes.BackColor = Color.FromArgb(244, 162, 97);
+            BotonGenInformes.BackColor = Color.FromArgb(56, 163, 203);
             BotonGenInformes.Cursor = Cursors.Hand;
             BotonGenInformes.Dock = DockStyle.Top;
             BotonGenInformes.FlatAppearance.BorderSize = 0;
@@ -231,7 +233,7 @@
             // 
             // PanelGestUsuarios
             // 
-            PanelGestUsuarios.BackColor = Color.FromArgb(240, 211, 155);
+            PanelGestUsuarios.BackColor = Color.FromArgb(224, 224, 224);
             PanelGestUsuarios.Controls.Add(btnEditarUsuario);
             PanelGestUsuarios.Controls.Add(btnRegistrarUsuario);
             PanelGestUsuarios.Dock = DockStyle.Top;
@@ -242,7 +244,7 @@
             // 
             // btnEditarUsuario
             // 
-            btnEditarUsuario.BackColor = Color.FromArgb(248, 191, 214);
+            btnEditarUsuario.BackColor = Color.FromArgb(244, 134, 180);
             btnEditarUsuario.Cursor = Cursors.Hand;
             btnEditarUsuario.Dock = DockStyle.Top;
             btnEditarUsuario.FlatAppearance.BorderSize = 0;
@@ -263,7 +265,7 @@
             // 
             // btnRegistrarUsuario
             // 
-            btnRegistrarUsuario.BackColor = Color.FromArgb(248, 191, 214);
+            btnRegistrarUsuario.BackColor = Color.FromArgb(244, 134, 180);
             btnRegistrarUsuario.Cursor = Cursors.Hand;
             btnRegistrarUsuario.Dock = DockStyle.Top;
             btnRegistrarUsuario.FlatAppearance.BorderSize = 0;
@@ -284,7 +286,7 @@
             // 
             // BotonGestUsuarios
             // 
-            BotonGestUsuarios.BackColor = Color.FromArgb(244, 162, 97);
+            BotonGestUsuarios.BackColor = Color.FromArgb(56, 163, 203);
             BotonGestUsuarios.Cursor = Cursors.Hand;
             BotonGestUsuarios.Dock = DockStyle.Top;
             BotonGestUsuarios.FlatAppearance.BorderSize = 0;
@@ -305,7 +307,7 @@
             // 
             // PanelSubGestLibros
             // 
-            PanelSubGestLibros.BackColor = Color.FromArgb(240, 211, 155);
+            PanelSubGestLibros.BackColor = Color.FromArgb(224, 224, 224);
             PanelSubGestLibros.Controls.Add(btnEliminarLibro);
             PanelSubGestLibros.Controls.Add(btnBuscarLibro);
             PanelSubGestLibros.Controls.Add(btnRegistrarLibro);
@@ -317,7 +319,7 @@
             // 
             // btnEliminarLibro
             // 
-            btnEliminarLibro.BackColor = Color.FromArgb(248, 191, 214);
+            btnEliminarLibro.BackColor = Color.FromArgb(244, 134, 180);
             btnEliminarLibro.Cursor = Cursors.Hand;
             btnEliminarLibro.Dock = DockStyle.Top;
             btnEliminarLibro.FlatAppearance.BorderSize = 0;
@@ -338,7 +340,7 @@
             // 
             // btnBuscarLibro
             // 
-            btnBuscarLibro.BackColor = Color.FromArgb(248, 191, 214);
+            btnBuscarLibro.BackColor = Color.FromArgb(244, 134, 180);
             btnBuscarLibro.Cursor = Cursors.Hand;
             btnBuscarLibro.Dock = DockStyle.Top;
             btnBuscarLibro.FlatAppearance.BorderSize = 0;
@@ -359,7 +361,7 @@
             // 
             // btnRegistrarLibro
             // 
-            btnRegistrarLibro.BackColor = Color.FromArgb(248, 191, 214);
+            btnRegistrarLibro.BackColor = Color.FromArgb(244, 134, 180);
             btnRegistrarLibro.BackgroundImageLayout = ImageLayout.None;
             btnRegistrarLibro.Cursor = Cursors.Hand;
             btnRegistrarLibro.Dock = DockStyle.Top;
@@ -381,7 +383,7 @@
             // 
             // BotonGestionLibros
             // 
-            BotonGestionLibros.BackColor = Color.FromArgb(244, 162, 97);
+            BotonGestionLibros.BackColor = Color.FromArgb(56, 163, 203);
             BotonGestionLibros.Cursor = Cursors.Hand;
             BotonGestionLibros.Dock = DockStyle.Top;
             BotonGestionLibros.FlatAppearance.BorderSize = 0;
@@ -403,7 +405,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.FromArgb(244, 162, 97);
+            panel1.BackColor = Color.FromArgb(56, 163, 203);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(lblTituloApp);
             panel1.Dock = DockStyle.Top;
@@ -434,7 +436,7 @@
             // 
             // panel2
             // 
-            panel2.BackColor = Color.FromArgb(244, 162, 97);
+            panel2.BackColor = Color.FromArgb(56, 163, 203);
             panel2.Dock = DockStyle.Bottom;
             panel2.Location = new Point(0, 788);
             panel2.Name = "panel2";
@@ -449,7 +451,7 @@
             panelChildForm.Controls.Add(lblMensajeUser);
             panelChildForm.Controls.Add(lblBienvenida);
             panelChildForm.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            panelChildForm.Location = new Point(348, 116);
+            panelChildForm.Location = new Point(343, 110);
             panelChildForm.Name = "panelChildForm";
             panelChildForm.Size = new Size(1060, 720);
             panelChildForm.TabIndex = 2;
@@ -466,7 +468,7 @@
             // 
             lblMensajeUser.BackColor = Color.WhiteSmoke;
             lblMensajeUser.Dock = DockStyle.Top;
-            lblMensajeUser.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblMensajeUser.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold);
             lblMensajeUser.Location = new Point(0, 77);
             lblMensajeUser.Name = "lblMensajeUser";
             lblMensajeUser.Size = new Size(1060, 78);
@@ -478,13 +480,24 @@
             // 
             lblBienvenida.BackColor = Color.WhiteSmoke;
             lblBienvenida.Dock = DockStyle.Top;
-            lblBienvenida.Font = new Font("Microsoft Sans Serif", 22F, FontStyle.Bold);
+            lblBienvenida.Font = new Font("Segoe UI Semibold", 24F, FontStyle.Bold);
             lblBienvenida.Location = new Point(0, 0);
             lblBienvenida.Name = "lblBienvenida";
             lblBienvenida.Size = new Size(1060, 77);
             lblBienvenida.TabIndex = 7;
             lblBienvenida.Text = "Bienvenid@: ";
             lblBienvenida.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.ForeColor = SystemColors.ButtonHighlight;
+            label3.Location = new Point(688, 17);
+            label3.Name = "label3";
+            label3.Size = new Size(80, 28);
+            label3.TabIndex = 12;
+            label3.Text = "BizFlow";
             // 
             // mainBibliotecario
             // 
@@ -544,5 +557,6 @@
         private Button button1;
         private Label label2;
         private Label label1;
+        private Label label3;
     }
 }
