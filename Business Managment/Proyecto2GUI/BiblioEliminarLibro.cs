@@ -23,66 +23,59 @@ namespace Proyecto2GUI
         }
         private void LimpiarSalidaDatos()
         {
-            lblISBN.Text = String.Empty;
-            lblRecibirTitulo.Text = String.Empty;
-            lblRecibirAutor.Text = String.Empty;
-            lblRecibirDisponibilidad.Text = String.Empty;
+            
         }
 
         private void btnBuscarLibro_Click_1(object sender, EventArgs e)
+        {//boton para agregar
+            Proveedor objeto = new Proveedor()
+            {//ID *en el video no lo coloco porque es para eliminar y editar * en este caso no se usa porque es autoincrementable
+                Nombre = txtNombre.Text,
+                Contacto = TxtContacto.Text,
+                Direccion = TxtDireccion.Text,
+                Telefono = int.Parse(TxtTelefono.Text),
+               
+
+            };
+            //devuelve una respuesta
+            bool respuesta = ProveedorLogica.Instancia.Guardar(objeto);
+
+            if (respuesta)
+            {
+                //ESTA COSA ES LA QUE MEUSTRA LA TABLA 
+                mostrar_Proveedor();
+            }
+
+
+
+        }
+
+        public void mostrar_Proveedor()
         {
-            if (_biblioteca.LibroExistente(RecibirBuscar.Text))
-            {
-                libroBuscado = _biblioteca.BuscarLibroISBN(RecibirBuscar.Text);
-                lblISBN.Text = libroBuscado.ISBN;
-                lblRecibirTitulo.Text = libroBuscado.Titulo;
-                lblRecibirAutor.Text = libroBuscado.Autor;
-                lblRecibirDisponibilidad.Text = libroBuscado.Disponible ? "Disponible" : "No disponible";
-                lblMensajeUsuario.Visible = false;
-            }
-            else
-            {
-                LimpiarSalidaDatos();
-                lblMensajeUsuario.Visible = true;
-                lblMensajeUsuario.Text = "El libro no se encontró.";
-                lblMensajeUsuario.ForeColor = Color.Red;
-            }
+            DGVProveedores.DataSource = null;
+            DGVProveedores.DataSource = ProveedorLogica.Instancia.Listar();
         }
 
 
         private void btnEliminarLibro_Click(object sender, EventArgs e)
-        {
-            if (libroBuscado != null)
-            {
-                bool eliminado = _biblioteca.EliminarLibro(libroBuscado);
+        {//boton para editar
 
-                if (eliminado)
-                {
-                    LimpiarSalidaDatos();
-                    lblMensajeUsuario.Visible = true;
-                    lblMensajeUsuario.Text = "Libro eliminado: " + libroBuscado.Titulo;
-                    lblMensajeUsuario.ForeColor = Color.DarkRed;
-
-                }
-                else
-                {
-                    lblMensajeUsuario.Visible = true;
-                    lblMensajeUsuario.Text = "Error al eliminar el libro. Puede que no exista en la lista.";
-                    lblMensajeUsuario.ForeColor = Color.Red;
-                }
-            }
-            else
-            {
-                lblMensajeUsuario.Visible = true;
-                lblMensajeUsuario.Text = "Error. Campos Vacíos";
-                lblMensajeUsuario.ForeColor = Color.DarkRed;
-            }
         }
 
         private void button2_Click(object sender, EventArgs e)
+        {//boton para eliminar XD si sorry wey, no me di cuenta que ya habia un eliminar
+
+           
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
-            LimpiarSalidaDatos();
-            libroBuscado = null;
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

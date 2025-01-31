@@ -1,39 +1,38 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SQLite;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.SQLite; //importamos todo lo necesario para interactuar con SQLite :V 
-
-using System.Configuration;
 
 namespace Proyecto2GUI
 {
-    public class ArticuloLogica
+    public class ProveedorLogica
     {
         //esta es la cadena de conexion que configura la conexion con la base de datos para realizar las Consultas
         private static string cadena = ConfigurationManager.ConnectionStrings["cadena"].ConnectionString;
         //ahora se pone un patron de diseño singleton, la verdad no entiendo nada de esto
         //pero nos permite hacer una instancia unica de nuestra clase 
-        private static ArticuloLogica _instancia = null;
+        private static ProveedorLogica _instancia = null;
 
-        public ArticuloLogica()
+        public ProveedorLogica()
         {
 
         }
-        public static ArticuloLogica Instancia
+        public static ProveedorLogica Instancia
         {
             get
             {
                 if (_instancia == null)
                 {
-                    _instancia= new ArticuloLogica();
+                    _instancia = new ProveedorLogica();
                 }
                 return _instancia;
             }
         }
         //Metodo para guardar / insertar datos en nuestra base dedatos 
-        public bool Guardar(Articulo obj)
+        public bool Guardar(Proveedor obj)
         {
             bool respuesta = true;
             //esta cosa pide una cadena de conexcion, la cadena de conexion la declaramos arribia, es la primera
@@ -45,23 +44,23 @@ namespace Proyecto2GUI
                 //" ID, Nombre, Marca, Cantidad, Precio " se trabaja con parametros para evitar la Inyeccion SQL
                 //EN RESUMEN AGREGA LOS DATOS QUE LE MANDO
                 //string query = "insert into Articulo(ID,Nombre,Marca,Cantidad,Precio) values (@ID,@Nombre,@Marca,@Cantidad,@Precio)";
-                string query = "insert into Articulo(Nombre,Marca,Cantidad,Precio) values (@Nombre,@Marca,@Cantidad,@Precio)";
+                string query = "insert into Proveedor(Nombre,Telefono,Contacto,Direccion) values (@Nombre,@Telefono,@Contacto,@Direccion)";
 
                 //esto recibe nuestra query que creamos arriba y nuestra conexion, este CMD se encarga de ejecutar nuestra consulta
                 //pero le tenemos que decir que envie unos parametros
                 SQLiteCommand cmd = new SQLiteCommand(query, conexion);
                 //el nombre del parametro y el valor, le enviamos un objeto de tipo persona
-               // cmd.Parameters.Add(new SQLiteParameter("@ID", obj.ID));
+                // cmd.Parameters.Add(new SQLiteParameter("@ID", obj.ID));
                 cmd.Parameters.Add(new SQLiteParameter("@Nombre", obj.Nombre));
-                cmd.Parameters.Add(new SQLiteParameter("@Marca", obj.Marca));
-                cmd.Parameters.Add(new SQLiteParameter("@Cantidad", obj.Cantidad));
-                cmd.Parameters.Add(new SQLiteParameter("@Precio", obj.Precio));
+                cmd.Parameters.Add(new SQLiteParameter("@Telefono", obj.Telefono));
+                cmd.Parameters.Add(new SQLiteParameter("@Contacto", obj.Contacto));
+                cmd.Parameters.Add(new SQLiteParameter("@Direccion", obj.Direccion));
                 //ahora le decimos que tipo va a ser 
                 cmd.CommandType = System.Data.CommandType.Text;
 
                 //si la cantidad de filas afectadas es menor que 1 significa que no se realizo bien 
                 //el comando y que ninguna fila fue afectada
-                if(cmd.ExecuteNonQuery() < 1)
+                if (cmd.ExecuteNonQuery() < 1)
                 {
                     respuesta = false;
                 }
@@ -70,14 +69,14 @@ namespace Proyecto2GUI
             return respuesta;
         }
         //metodo para leer y saber si estamos insertando datos 
-        public List<Articulo> Listar()
+        public List<Proveedor> Listar()
         {
-            List<Articulo> oLista = new List<Articulo>();
+            List<Proveedor> oLista = new List<Proveedor>();
 
             using (SQLiteConnection conexion = new SQLiteConnection(cadena))
             {
                 conexion.Open();
-                string query = "select * from Articulo";
+                string query = "select * from Proveedor";
                 SQLiteCommand cmd = new SQLiteCommand(query, conexion);
                 cmd.CommandType = System.Data.CommandType.Text;
 
@@ -87,13 +86,15 @@ namespace Proyecto2GUI
                     //mientras lee los agrega a la lista
                     while (dr.Read())
                     {
-                        oLista.Add(new Articulo()
+                        oLista.Add(new Proveedor()
                         {
-                            ID = int.Parse(dr["ID"].ToString()),
+                            IDProveedor = int.Parse(dr["IDProveedor"].ToString()),
                             Nombre = dr["Nombre"].ToString(),
-                            Marca = dr["Marca"].ToString(),
-                            Cantidad = int.Parse(dr["Cantidad"].ToString()),
-                            Precio = int.Parse(dr["Precio"].ToString()),
+                            Telefono = int.Parse(dr["Telefono"].ToString()),
+                            Contacto = dr["Contacto"].ToString(),
+                            Direccion = dr["Direccion"].ToString(),
+                            
+                            
                         });
                     }
                 }
@@ -101,36 +102,6 @@ namespace Proyecto2GUI
 
             }
             return oLista;
-        }
-
-        //ESTE ES EL METODO PARA EDITAR UNO DE LOS ELEMENTOS DE LA BASE DE DATOS 
-        //SOLO SE CAMBIO LA SENTENCIA SQL Y BUSCA POR EL ID DEL OBJETO
-        public bool Editar(Articulo obj)
-        {
-            bool respuesta = true;
-            
-            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
-            {
-                
-                conexion.Open();
-        
-                string query = "Update Articulo set Nombre = @Nombre,Marca = @Marca,Cantidad = @Cantidad,Precio = @Precio where ID = @ID";
-
-                
-                SQLiteCommand cmd = new SQLiteCommand(query, conexion);
-                cmd.Parameters.Add(new SQLiteParameter("@ID", obj.ID));
-                cmd.Parameters.Add(new SQLiteParameter("@Nombre", obj.Nombre));
-                cmd.Parameters.Add(new SQLiteParameter("@Marca", obj.Marca));
-                cmd.Parameters.Add(new SQLiteParameter("@Cantidad", obj.Cantidad));
-                cmd.Parameters.Add(new SQLiteParameter("@Precio", obj.Precio));
-                cmd.CommandType = System.Data.CommandType.Text;
-                if (cmd.ExecuteNonQuery() < 1)
-                {
-                    respuesta = false;
-                }
-
-            }
-            return respuesta;
         }
         // metodo de eliminar DU'H 
         public bool Eliminar(Articulo obj)
@@ -153,7 +124,7 @@ namespace Proyecto2GUI
             }
             return respuesta;
         }
-
+        //busqueda por ID
         public Articulo ObtenerPorID(int id)
         {
             Articulo articulo = null; // Inicializamos el objeto en null para manejar casos en los que no se encuentre el artículo.
@@ -186,5 +157,6 @@ namespace Proyecto2GUI
             return articulo; // Devuelve el artículo encontrado o null si no existe.
         }
 
+
     }
-} //hay que buscar si se cierran las consultas, la verdad no se y se si lo hice, supone que es importante cerrarlas XD
+}
