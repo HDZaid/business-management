@@ -189,8 +189,11 @@ namespace Proyecto2GUI
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
-            _biblioteca.CerrarSesion();
-            _login.Show();
+            Application.Exit();
+            //Cerrar la aplicacion, quitar el comentado
+            //_biblioteca.CerrarSesion();
+            //_login.Show();
+
         }
 
         private void barraTitulo_Paint(object sender, PaintEventArgs e)
