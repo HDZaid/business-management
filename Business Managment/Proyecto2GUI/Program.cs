@@ -18,7 +18,7 @@ namespace Proyecto2GUI
 
             Biblioteca biblioteca = new Biblioteca();
             biblioteca.LibrosUsuariosPredeterminados();
-            Application.Run(new Login(biblioteca));
+            Application.Run(new mainBibliotecario());
 
 
 

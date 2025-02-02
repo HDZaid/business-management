@@ -17,7 +17,7 @@ namespace Proyecto2GUI
     {
         Biblioteca _biblioteca;
         public Login _login;
-        public mainBibliotecario(Biblioteca biblioteca, Login login)
+        public mainBibliotecario(Biblioteca biblioteca = null, Login login = null)
         {
             _biblioteca = biblioteca;
             _login = login;
@@ -51,7 +51,8 @@ namespace Proyecto2GUI
         //Mensajes bienvenudo
         private void BienvenudoUsuario()
         {
-            lblMensajeUser.Text = _biblioteca.UsuarioActual.ID;
+            //lblMensajeUser.Text = _biblioteca.UsuarioActual.ID;
+            lblMensajeUser.Text = "NO WEON >:V";
         }
 
         private void customizeDesign()
