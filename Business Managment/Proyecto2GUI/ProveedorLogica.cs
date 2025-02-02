@@ -10,10 +10,8 @@ namespace Proyecto2GUI
 {
     public class ProveedorLogica
     {
-        //esta es la cadena de conexion que configura la conexion con la base de datos para realizar las Consultas
+        
         private static string cadena = ConfigurationManager.ConnectionStrings["cadena"].ConnectionString;
-        //ahora se pone un patron de diseño singleton, la verdad no entiendo nada de esto
-        //pero nos permite hacer una instancia unica de nuestra clase 
         private static ProveedorLogica _instancia = null;
 
         public ProveedorLogica()
@@ -35,31 +33,20 @@ namespace Proyecto2GUI
         public bool Guardar(Proveedor obj)
         {
             bool respuesta = true;
-            //esta cosa pide una cadena de conexcion, la cadena de conexion la declaramos arribia, es la primera
+            
             using (SQLiteConnection conexion = new SQLiteConnection(cadena))
             {
-                //"abrimos la cadena de conexion"
+                
                 conexion.Open();
-                //un objeto llamado query, que ingresa los datos en nuestra "TABLA Articulo", en los campos
-                //" ID, Nombre, Marca, Cantidad, Precio " se trabaja con parametros para evitar la Inyeccion SQL
-                //EN RESUMEN AGREGA LOS DATOS QUE LE MANDO
-                //string query = "insert into Articulo(ID,Nombre,Marca,Cantidad,Precio) values (@ID,@Nombre,@Marca,@Cantidad,@Precio)";
                 string query = "insert into Proveedor(Nombre,Telefono,Contacto,Direccion) values (@Nombre,@Telefono,@Contacto,@Direccion)";
 
-                //esto recibe nuestra query que creamos arriba y nuestra conexion, este CMD se encarga de ejecutar nuestra consulta
-                //pero le tenemos que decir que envie unos parametros
                 SQLiteCommand cmd = new SQLiteCommand(query, conexion);
-                //el nombre del parametro y el valor, le enviamos un objeto de tipo persona
-                // cmd.Parameters.Add(new SQLiteParameter("@ID", obj.ID));
                 cmd.Parameters.Add(new SQLiteParameter("@Nombre", obj.Nombre));
                 cmd.Parameters.Add(new SQLiteParameter("@Telefono", obj.Telefono));
                 cmd.Parameters.Add(new SQLiteParameter("@Contacto", obj.Contacto));
                 cmd.Parameters.Add(new SQLiteParameter("@Direccion", obj.Direccion));
-                //ahora le decimos que tipo va a ser 
                 cmd.CommandType = System.Data.CommandType.Text;
 
-                //si la cantidad de filas afectadas es menor que 1 significa que no se realizo bien 
-                //el comando y que ninguna fila fue afectada
                 if (cmd.ExecuteNonQuery() < 1)
                 {
                     respuesta = false;
