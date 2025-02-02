@@ -8,5 +8,6 @@ namespace Proyecto2GUI
 {
     public class FacturaVentas
     {
+
     }
 }

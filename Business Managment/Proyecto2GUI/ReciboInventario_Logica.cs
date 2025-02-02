@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Proyecto2GUI
 {
-    internal class ReciboInventario_Logica
+    public class ReciboInventario_Logica
     {
+        //agregar 1
+        //mostrar todo
+        //buscar
     }
 }
