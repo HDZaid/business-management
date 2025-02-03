@@ -18,12 +18,11 @@ namespace Proyecto2GUI
         {
             _biblioteca = biblioteca;
             InitializeComponent();
-            lblMensajeUsuario.Visible = false;
-            lblConfirmacion.Visible = false;
+
         }
         private void btnAgregarUsuario_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(RecibirID.Text) ||
+            /*if (string.IsNullOrWhiteSpace(RecibirID.Text) ||
                 string.IsNullOrWhiteSpace(RecibirNombre.Text) ||
                 string.IsNullOrWhiteSpace(RecibirContraseña.Text) ||
                 RecibirRol.SelectedItem == null)
@@ -43,6 +42,7 @@ namespace Proyecto2GUI
             
             _biblioteca.RegistrarUsuarioNuevo(RecibirID.Text, RecibirNombre.Text, RecibirContraseña.Text, rol);
             lblConfirmacion.Visible=true;
+            */
             LimpiarCampos();
         }
         private void btnLimpiarCampos_Click(object sender, EventArgs e)
@@ -51,11 +51,12 @@ namespace Proyecto2GUI
         }
         private void LimpiarCampos()
         {
-            RecibirID.Clear();
+            /*RecibirID.Clear();
             RecibirNombre.Clear();
             RecibirContraseña.Clear();
             RecibirRol.SelectedIndex = -1;
             lblMensajeUsuario.Visible = false;
+            */
         }
 
     }

@@ -29,52 +29,36 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BiblioAgregarUsuario));
-            label1 = new Label();
             panel1 = new Panel();
             RecibirRol = new ComboBox();
             RecibirContraseña = new TextBox();
-            RecibirNombre = new TextBox();
-            RecibirID = new TextBox();
-            lblConfirmacion = new Label();
             label5 = new Label();
             btnLimpiarCampos = new Button();
-            lblMensajeUsuario = new Label();
             btnAgregarUsuario = new Button();
-            label4 = new Label();
             label3 = new Label();
+            Cantidad = new Label();
+            label1 = new Label();
+            groupBox1 = new GroupBox();
+            label6 = new Label();
+            lblFecha = new Label();
             label2 = new Label();
+            lblPrecio = new Label();
             panel1.SuspendLayout();
+            groupBox1.SuspendLayout();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.Dock = DockStyle.Top;
-            label1.Font = new Font("Aston Script Bold", 22F, FontStyle.Bold);
-            label1.Location = new Point(0, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(982, 150);
-            label1.TabIndex = 9;
-            label1.Text = "Agregar Usuario";
-            label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // panel1
             // 
-            panel1.Controls.Add(RecibirRol);
-            panel1.Controls.Add(RecibirContraseña);
-            panel1.Controls.Add(RecibirNombre);
-            panel1.Controls.Add(RecibirID);
-            panel1.Controls.Add(lblConfirmacion);
-            panel1.Controls.Add(label5);
+            panel1.Controls.Add(lblFecha);
+            panel1.Controls.Add(label6);
+            panel1.Controls.Add(groupBox1);
             panel1.Controls.Add(btnLimpiarCampos);
-            panel1.Controls.Add(lblMensajeUsuario);
             panel1.Controls.Add(btnAgregarUsuario);
-            panel1.Controls.Add(label4);
-            panel1.Controls.Add(label3);
-            panel1.Controls.Add(label2);
             panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 150);
+            panel1.Location = new Point(0, 66);
+            panel1.Margin = new Padding(4, 4, 4, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(982, 353);
+            panel1.Size = new Size(1228, 441);
             panel1.TabIndex = 11;
             // 
             // RecibirRol
@@ -83,9 +67,10 @@
             RecibirRol.Font = new Font("Segoe UI Variable Display Semib", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             RecibirRol.FormattingEnabled = true;
             RecibirRol.Items.AddRange(new object[] { "Bibliotecario", "Lector" });
-            RecibirRol.Location = new Point(236, 192);
+            RecibirRol.Location = new Point(30, 77);
+            RecibirRol.Margin = new Padding(4, 4, 4, 4);
             RecibirRol.Name = "RecibirRol";
-            RecibirRol.Size = new Size(437, 30);
+            RecibirRol.Size = new Size(368, 35);
             RecibirRol.TabIndex = 27;
             RecibirRol.ValueMember = "1, 2";
             // 
@@ -93,48 +78,20 @@
             // 
             RecibirContraseña.BorderStyle = BorderStyle.None;
             RecibirContraseña.Font = new Font("Segoe UI Variable Small", 10.8F);
-            RecibirContraseña.Location = new Point(236, 143);
+            RecibirContraseña.Location = new Point(429, 77);
+            RecibirContraseña.Margin = new Padding(4, 4, 4, 4);
             RecibirContraseña.Name = "RecibirContraseña";
-            RecibirContraseña.Size = new Size(437, 24);
+            RecibirContraseña.Size = new Size(329, 29);
             RecibirContraseña.TabIndex = 7;
-            // 
-            // RecibirNombre
-            // 
-            RecibirNombre.BorderStyle = BorderStyle.None;
-            RecibirNombre.Font = new Font("Segoe UI Variable Small", 10.8F);
-            RecibirNombre.Location = new Point(236, 94);
-            RecibirNombre.Name = "RecibirNombre";
-            RecibirNombre.Size = new Size(437, 24);
-            RecibirNombre.TabIndex = 5;
-            // 
-            // RecibirID
-            // 
-            RecibirID.BorderStyle = BorderStyle.None;
-            RecibirID.Font = new Font("Segoe UI Variable Small", 10.8F);
-            RecibirID.Location = new Point(236, 43);
-            RecibirID.Name = "RecibirID";
-            RecibirID.Size = new Size(437, 24);
-            RecibirID.TabIndex = 6;
-            // 
-            // lblConfirmacion
-            // 
-            lblConfirmacion.AutoSize = true;
-            lblConfirmacion.Font = new Font("Segoe UI Variable Small", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblConfirmacion.ForeColor = Color.Goldenrod;
-            lblConfirmacion.Location = new Point(391, 281);
-            lblConfirmacion.Name = "lblConfirmacion";
-            lblConfirmacion.Size = new Size(196, 27);
-            lblConfirmacion.TabIndex = 28;
-            lblConfirmacion.Text = "Usuario Registrado";
-            lblConfirmacion.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Bold);
-            label5.Location = new Point(106, 189);
+            label5.Location = new Point(30, 132);
+            label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
-            label5.Size = new Size(46, 27);
+            label5.Size = new Size(57, 32);
             label5.TabIndex = 26;
             label5.Text = "Rol:";
             // 
@@ -149,26 +106,15 @@
             btnLimpiarCampos.Font = new Font("Segoe UI Variable Small Semibol", 9F, FontStyle.Bold);
             btnLimpiarCampos.Image = (Image)resources.GetObject("btnLimpiarCampos.Image");
             btnLimpiarCampos.ImageAlign = ContentAlignment.MiddleLeft;
-            btnLimpiarCampos.Location = new Point(717, 113);
+            btnLimpiarCampos.Location = new Point(252, 368);
+            btnLimpiarCampos.Margin = new Padding(4, 4, 4, 4);
             btnLimpiarCampos.Name = "btnLimpiarCampos";
-            btnLimpiarCampos.Size = new Size(168, 40);
+            btnLimpiarCampos.Size = new Size(210, 50);
             btnLimpiarCampos.TabIndex = 25;
             btnLimpiarCampos.Text = "Limpiar Campos";
             btnLimpiarCampos.TextAlign = ContentAlignment.MiddleRight;
             btnLimpiarCampos.UseVisualStyleBackColor = false;
             btnLimpiarCampos.Click += btnLimpiarCampos_Click;
-            // 
-            // lblMensajeUsuario
-            // 
-            lblMensajeUsuario.AutoSize = true;
-            lblMensajeUsuario.Font = new Font("Segoe UI Variable Small", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblMensajeUsuario.ForeColor = Color.DarkRed;
-            lblMensajeUsuario.Location = new Point(319, 308);
-            lblMensajeUsuario.Name = "lblMensajeUsuario";
-            lblMensajeUsuario.Size = new Size(325, 27);
-            lblMensajeUsuario.TabIndex = 24;
-            lblMensajeUsuario.Text = "No puede repetir numeros de ID";
-            lblMensajeUsuario.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // btnAgregarUsuario
             // 
@@ -181,74 +127,138 @@
             btnAgregarUsuario.Font = new Font("Segoe UI Variable Small Semibol", 9F, FontStyle.Bold);
             btnAgregarUsuario.Image = (Image)resources.GetObject("btnAgregarUsuario.Image");
             btnAgregarUsuario.ImageAlign = ContentAlignment.MiddleLeft;
-            btnAgregarUsuario.Location = new Point(717, 57);
+            btnAgregarUsuario.Location = new Point(34, 368);
+            btnAgregarUsuario.Margin = new Padding(4, 4, 4, 4);
             btnAgregarUsuario.Name = "btnAgregarUsuario";
-            btnAgregarUsuario.Size = new Size(168, 40);
+            btnAgregarUsuario.Size = new Size(210, 50);
             btnAgregarUsuario.TabIndex = 9;
             btnAgregarUsuario.Text = "Agregar Usuario";
             btnAgregarUsuario.TextAlign = ContentAlignment.MiddleRight;
             btnAgregarUsuario.UseVisualStyleBackColor = false;
             btnAgregarUsuario.Click += btnAgregarUsuario_Click;
             // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Bold);
-            label4.Location = new Point(106, 140);
-            label4.Name = "label4";
-            label4.Size = new Size(125, 27);
-            label4.TabIndex = 2;
-            label4.Text = "Contraseña:";
-            // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Bold);
-            label3.Location = new Point(106, 40);
+            label3.Location = new Point(30, 41);
+            label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
-            label3.Size = new Size(38, 27);
+            label3.Size = new Size(44, 32);
             label3.TabIndex = 1;
             label3.Text = "ID:";
             // 
+            // Cantidad
+            // 
+            Cantidad.AutoSize = true;
+            Cantidad.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Bold);
+            Cantidad.Location = new Point(422, 41);
+            Cantidad.Margin = new Padding(4, 0, 4, 0);
+            Cantidad.Name = "Cantidad";
+            Cantidad.Size = new Size(124, 32);
+            Cantidad.TabIndex = 0;
+            Cantidad.Text = "Cantidad:";
+            // 
+            // label1
+            // 
+            label1.Dock = DockStyle.Top;
+            label1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(0, 0);
+            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(1228, 66);
+            label1.TabIndex = 9;
+            label1.Text = "Facturas";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // groupBox1
+            // 
+            groupBox1.BackColor = Color.FromArgb(224, 224, 224);
+            groupBox1.Controls.Add(lblPrecio);
+            groupBox1.Controls.Add(label2);
+            groupBox1.Controls.Add(label3);
+            groupBox1.Controls.Add(RecibirRol);
+            groupBox1.Controls.Add(Cantidad);
+            groupBox1.Controls.Add(RecibirContraseña);
+            groupBox1.Controls.Add(label5);
+            groupBox1.FlatStyle = FlatStyle.Popup;
+            groupBox1.Location = new Point(34, 90);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(1014, 258);
+            groupBox1.TabIndex = 29;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Area de Ventas";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.Location = new Point(754, 40);
+            label6.Name = "label6";
+            label6.Size = new Size(126, 25);
+            label6.TabIndex = 30;
+            label6.Text = "Fecha Actual:";
+            // 
+            // lblFecha
+            // 
+            lblFecha.AutoSize = true;
+            lblFecha.Location = new Point(883, 40);
+            lblFecha.Name = "lblFecha";
+            lblFecha.Size = new Size(76, 25);
+            lblFecha.TabIndex = 31;
+            lblFecha.Text = "lblFecha";
+            // 
             // label2
             // 
-            label2.AutoSize = true;
             label2.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Bold);
-            label2.Location = new Point(106, 90);
+            label2.Location = new Point(817, 27);
+            label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(94, 27);
-            label2.TabIndex = 0;
-            label2.Text = "Nombre:";
+            label2.Size = new Size(170, 46);
+            label2.TabIndex = 28;
+            label2.Text = "Cantidad:";
+            label2.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lblPrecio
+            // 
+            lblPrecio.Location = new Point(817, 73);
+            lblPrecio.Name = "lblPrecio";
+            lblPrecio.Size = new Size(170, 33);
+            lblPrecio.TabIndex = 29;
+            lblPrecio.Text = "lblPrecio";
+            lblPrecio.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // BiblioAgregarUsuario
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(982, 553);
+            ClientSize = new Size(1228, 691);
             Controls.Add(panel1);
             Controls.Add(label1);
+            Margin = new Padding(4, 4, 4, 4);
             Name = "BiblioAgregarUsuario";
             Text = "BiblioAgregarUsuario";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
-
-        private Label label1;
         private Panel panel1;
         private Button btnAgregarUsuario;
         private TextBox RecibirContraseña;
-        private TextBox RecibirID;
-        private TextBox RecibirNombre;
-        private Label label4;
         private Label label3;
-        private Label label2;
-        private Label lblMensajeUsuario;
+        private Label Cantidad;
         private Button btnLimpiarCampos;
         private Label label5;
         private ComboBox RecibirRol;
-        private Label lblConfirmacion;
+        private GroupBox groupBox1;
+        private Label label1;
+        private Label lblFecha;
+        private Label label6;
+        private Label lblPrecio;
+        private Label label2;
     }
 }
