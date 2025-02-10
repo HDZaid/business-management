@@ -12,7 +12,9 @@ namespace Proyecto2GUI
         public DateTime Fecha { get; set; }  // Cambiado de int a DateTime
         public double Precio { get; set; }  // Cambiado de int a decimal si usas valores decimales 
         public int Cantidad { get; set; }
-        public int IDArticulo { get; set; }  // Clave foránea
         public int IDProveedor { get; set; } // Clave foránea
+        public Proveedor Proveedor { get; set; } //representa el objeto al que hago referencia usando la llave foránea
+
+        
     }
 }

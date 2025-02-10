@@ -23,7 +23,7 @@ namespace Proyecto2GUI
         }
         private void LimpiarSalidaDatos()
         {
-            
+
         }
 
         private void btnBuscarLibro_Click_1(object sender, EventArgs e)
@@ -34,7 +34,7 @@ namespace Proyecto2GUI
                 Contacto = TxtContacto.Text,
                 Direccion = TxtDireccion.Text,
                 Telefono = int.Parse(TxtTelefono.Text),
-               
+
 
             };
             //devuelve una respuesta
@@ -65,7 +65,7 @@ namespace Proyecto2GUI
         private void button2_Click(object sender, EventArgs e)
         {//boton para eliminar XD si sorry wey, no me di cuenta que ya habia un eliminar
 
-           
+
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -76,6 +76,11 @@ namespace Proyecto2GUI
         private void label4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            mostrar_Proveedor();
         }
     }
 }

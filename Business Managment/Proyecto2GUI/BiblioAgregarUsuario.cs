@@ -22,29 +22,47 @@ namespace Proyecto2GUI
         }
         private void btnAgregarUsuario_Click(object sender, EventArgs e)
         {
-            /*if (string.IsNullOrWhiteSpace(RecibirID.Text) ||
-                string.IsNullOrWhiteSpace(RecibirNombre.Text) ||
-                string.IsNullOrWhiteSpace(RecibirContraseña.Text) ||
-                RecibirRol.SelectedItem == null)
+
+            ReciboInventario objeto = new ReciboInventario()
+            {//ID *en el video no lo coloco porque es para eliminar y editar * en este caso no se usa porque es autoincrementable
+                IDProveedor = int.Parse(txtIDproveedor.Text),
+                // Fecha = txtmarca.Text,
+                Cantidad = int.Parse(txtCantidad.Text),
+                Precio = int.Parse(txtPrecio.Text)
+
+            };
+            //devuelve una respuesta
+            bool respuesta = ReciboInventario_Logica.Instancia.Guardar(objeto);
+
+            if (respuesta)
             {
-                MessageBox.Show("Por favor, complete todos los campos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                //ESTA COSA ES LA QUE MEUSTRA LA TABLA 
+                mostrar_Recibo();
             }
 
-            if (_biblioteca.UsuarioExistente(RecibirID.Text))
-            {
-                lblMensajeUsuario.Visible = true;
-                RecibirID.Clear();
-                return;
-            }
-
-            int rol = RecibirRol.SelectedIndex + 1;
-            
-            _biblioteca.RegistrarUsuarioNuevo(RecibirID.Text, RecibirNombre.Text, RecibirContraseña.Text, rol);
-            lblConfirmacion.Visible=true;
-            */
-            LimpiarCampos();
+            // LimpiarCampos();
         }
+        public void mostrar_Recibo()
+        { 
+            //EDITAR COSO
+            List<ReciboInventario> lista = ReciboInventario_Logica.Instancia.ListarRecibos();
+
+            // Transformar la lista para mostrar solo los datos necesarios
+            var listaSimplificada = lista.Select(r => new
+            {
+                r.IDRecibo,
+                r.Fecha,
+                r.Precio,
+                r.IDProveedor,
+                r.Cantidad,
+                NombreProveedor = r.Proveedor?.Nombre ?? "Sin proveedor" // Manejo de valores nulos
+            }).ToList();
+
+            // Asignar la lista procesada al DataGridView
+            DGVlista.DataSource = null;
+            DGVlista.DataSource = listaSimplificada;
+        }
+
         private void btnLimpiarCampos_Click(object sender, EventArgs e)
         {
             LimpiarCampos();
@@ -59,5 +77,9 @@ namespace Proyecto2GUI
             */
         }
 
+        private void mostrarTodo_Click(object sender, EventArgs e)
+        {
+            mostrar_Recibo();
+        }
     }
 }
